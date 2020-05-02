@@ -1,0 +1,17 @@
+#main {
+    :nth-child(#{$last_child}) {
+        margin-bottom: 0;
+    }
+    margin: 0 map-get($size, main-margin);
+    transition: opacity 1s ease-in-out;
+    transition-delay: 1s;
+    @include tablet {
+        margin: 0 4rem;
+    }
+    @include mobile {
+        margin: 0;
+    }
+    /*body.is-preload & {
+        opacity: 0;
+    }*/
+}

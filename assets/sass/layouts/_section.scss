@@ -1,0 +1,39 @@
+section {
+    h2 {
+        background: url("../../images/wood.jpg");
+        padding: 0.5rem 1rem;
+        box-shadow: 1px 1px 5px black;
+        //border: 2px solid burlywood;
+        color: map-get($palette , main-writing);
+    }
+    .title__frame {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        margin-top: 3rem; //+1rem from tile
+        margin-bottom: 1rem;
+        transform: translateX(-50%);
+        /*&:before, &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -67px;
+            //box-shadow: 1px 1px 5px black;
+            background-image: url("../../images/rope.png");
+            background-size: cover;
+            //transform: rotate(90deg);
+            height: 70px;
+            width: 30px;
+        }
+        &:after {
+            right: 22px;
+        }*/
+    }
+    .flower {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 165px;
+    }
+}

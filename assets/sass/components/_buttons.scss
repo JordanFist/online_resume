@@ -1,0 +1,52 @@
+.button {
+    cursor: pointer;
+    span {
+        color: #212931;
+        transition: color 0.1s ease-in-out;
+    }
+    &:hover {
+        span {
+            color: burlywood;
+        }
+    }
+
+    &.network {
+        .icon {
+            transition: color 0.2s ease-in-out;
+        }
+        &:hover .icon {
+            color: burlywood;
+        }
+    }
+    &.flag { 
+        span {
+            font-size: 0.75rem;
+            margin-left: 0.3rem;
+        }
+        &.active span {
+            color: burlywood;
+            font-weight: bold;
+        }
+    }
+    
+    &.resume {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 11rem;
+        border-radius: 3px;
+        padding: 5px 35px 5px 35px;
+        letter-spacing: 0.08rem;
+        line-height: 2.8rem;
+        background-color: rgb(219, 187, 145);
+        box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.5);
+        transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        color: white;
+        background-image: radial-gradient(rgba(0, 0, 0, 0.10) 60%, rgba(0, 0, 0, 0.05) 80%);
+
+        &:hover {
+            color: whitesmoke;
+            background-color: rgba(245, 245, 245, 0.1);
+        }
+    }
+}

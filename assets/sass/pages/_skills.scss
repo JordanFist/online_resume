@@ -1,0 +1,35 @@
+.skills {
+    .tile {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    p {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    h4 {
+        padding: 10px 0;
+    }
+    .icon__frame {
+        display: flex;
+        margin: 0 auto;
+        height: 70px;
+        width: 70px;
+        border: 2px solid #d6d5d5;
+        clip-path: circle(49%);
+    }
+    .skills__icons {
+        padding: 0 1rem;
+        span {
+            display: inline-block;
+            line-height: 1rem;
+            padding: 0.3rem 0.8rem;
+            margin-right: 0.4rem;
+            border-radius: 25px;
+            background-color: rgb(235, 235, 235);
+            font-size: 0.8rem;
+        }
+    }
+}
+

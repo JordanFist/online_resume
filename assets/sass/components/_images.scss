@@ -1,0 +1,49 @@
+.image {
+    &.tiny {
+        width: 25px;
+        height: 15px;
+        vertical-align: middle;
+        border-radius: 2px;
+        box-shadow: 0 0.2rem 0.5rem rgb(0, 0, 0, 0.2);
+    }
+    &.round {
+        display: block;
+        margin: 2rem auto;
+        width: 25%;
+        border-radius: 50%; 
+        min-width: 100px;
+        max-width: 150px;
+        &.special {
+            width: 38%;
+            margin: 0.1rem auto;
+            min-width: 161px;
+            max-width: 240px;
+        }
+    }
+    &.square {
+        display: block;
+        margin: auto auto;
+        width: 70%;
+        max-width: 200px;
+        min-width: 150px;
+    }
+    &.framed {
+        vertical-align: bottom;
+        transition: transform 0.2s ease-out;
+        width: 100%;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    &.full-width {
+        width: 100%;
+        border-top-left-radius: map-get($size , tile-radius);
+        border-top-right-radius: map-get($size , tile-radius);
+    }
+    &.profile-picture {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        border: 5px solid map-get($palette, main-background);
+    }
+}

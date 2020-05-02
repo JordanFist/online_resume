@@ -1,0 +1,23 @@
+.icon {
+    &.tiny {
+        margin-left: 0.2rem;
+        font-size: 0.7rem;
+    }
+    &.small {
+        color: #212931;
+        margin-right: 0.8rem;
+        font-size: 1rem;
+        &.resume {
+            color: whitesmoke;
+        }
+    }
+    &.circled {
+        font-size: 2.4rem;
+        margin: auto auto;
+    }
+    &.big {
+        color: rgb(250, 250, 250); 
+        font-size: 3rem;
+    }
+}
+

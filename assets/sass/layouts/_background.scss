@@ -1,0 +1,9 @@
+#background {
+    transition: background-color 3s ease-in;
+    transition-delay: 1s;
+    /*body.is-preload & {
+        z-index: 1;
+        background-color: map-get($palette, pre-background);
+    }*/
+}
+

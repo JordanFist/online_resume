@@ -1,0 +1,45 @@
+nav {
+    transition: opacity 2s ease-in-out;
+    transition-delay: 2s;
+    text-align: right;
+    position: fixed;
+    right: 1.5%;
+    top: calc(50% - 133px); // Can't apply translateY due to a jarallax bug
+    z-index: 1;
+    svg {
+        height: 12px;
+        width: 12px;
+        fill: transparent;
+        stroke: #000000;
+        stroke-width: 4px;
+    }
+    span {
+        display: inline-block;
+        animation: 0.3s ease-in-out fadeOutRight forwards;
+        padding-right: 0.8rem;
+    }
+    a {
+        &:hover {
+            span {
+                animation: 0.3s ease-in-out fadeInRight;
+            }
+            svg {
+                fill: #000000;
+                cursor: pointer;
+            }
+        }
+        &.link__active {
+            span {
+                animation: 0.3s ease-in-out fadeInRight;
+            }
+            svg {
+                fill: #000000;
+            }
+        }
+    }
+    /*body.is-preload & {
+        opacity: 0;
+    }*/
+}
+
+

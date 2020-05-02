@@ -1,0 +1,35 @@
+/* Footer */
+
+footer {
+    transition: opacity 1s ease-in-out;
+    transition-delay: 1s;
+    hr {
+        margin: 0 auto;
+        height: 1px;
+        width: 35%;
+        background-color: white;
+    }
+    .contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 1.5rem 0 1.5rem 0;
+        background-image: radial-gradient(rgba(0, 0, 0, 0.15) 35%, rgba(0, 0, 0, 0.1) 0%);
+        :nth-child(2) {
+            margin: auto 1.5rem;
+        }
+        .contact__mail {
+            &.copied {
+                animation: 1s bounceIn;
+            }
+        }
+    }
+    .copyright {
+        background-color: map-get($palette, footer-background);
+        padding: 0.06rem 0rem;
+    }
+    /*body.is-preload & {
+        opacity: 0;
+    }*/
+}
+  
