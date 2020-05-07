@@ -23,21 +23,11 @@
             margin-right: 0.4rem;
         }
         span, i {
-            transition: color 0.3s ease-in-out;
+            //transition: color 0.3s ease-in-out;
         }
-        &:hover { 
+        &:active { 
             span, i {
                 color: burlywood;
-            }
-        }
-        &:focus {
-            span, i {
-                color: red;
-            }
-        }
-        &:active {
-            span, i {
-                color: blue;
             }
         }
         
@@ -48,21 +38,11 @@
             }
             i {
                 color: #aaaaaa;
-                transition: color 0.3s ease-in-out;
-            }
-            &:hover {
-                i {
-                    color: burlywood;
-                }
-            }
-            &:focus {
-                i {
-                    color: red;
-                }
+                //transition: color 0.3s ease-in-out;
             }
             &:active {
                 i {
-                    color: blue;
+                    color: burlywood;
                 }
             }
         }
