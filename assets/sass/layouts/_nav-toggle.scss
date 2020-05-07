@@ -22,16 +22,13 @@
             margin-top: 0;
             margin-right: 0.4rem;
         }
-        /*span, i {
+        span, i {
             transition: color 0.3s ease-in-out;
         }
         &:hover { 
             span, i {
                 color: burlywood;
             }
-        }*/
-        &.hover {
-            animation: hoverColor 1s;
         }
 
         &.expanded {
@@ -41,28 +38,13 @@
             }
             i {
                 color: #aaaaaa;
-                //transition: color 0.3s ease-in-out;
+                transition: color 0.3s ease-in-out;
             }
-            /*&:hover {
+            &:hover {
                 i {
                     color: burlywood !important;
                 }
-            }*/
-            &.hover {
-                animation: hoverColor 1s;
             }
         }
-    }
-}
-
-@keyframes hoverColor {
-    0% {
-        color: white;
-    }
-    50% {
-        color: burlywood;
-    }
-    100% {
-        color: white;
     }
 }

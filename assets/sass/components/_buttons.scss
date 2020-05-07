@@ -4,9 +4,11 @@
         color: #212931;
         transition: color 0.2s ease-in-out;
     }
-    &:hover {
-        span {
-            color: burlywood;
+    @media (any-hover: hover) {
+        &:hover {
+            span {
+                color: burlywood;
+            }
         }
     }
 

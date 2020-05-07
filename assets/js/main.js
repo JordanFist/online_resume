@@ -149,12 +149,4 @@
 		});
 	});
 
-	//
-	$('.nav-toggle').on('touchstart', function(){
-		jQuery(this).addClass('hover');
-	});
-	$('.nav-toggle').on('touchend', function(){
-		jQuery(this).removeClass('hover');
-	});
-
 })(jQuery);
