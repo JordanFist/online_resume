@@ -1,12 +1,23 @@
 @mixin mobile {
-    @media screen and (max-width: map-get($breakpoints, mobile)){
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media screen and (max-width: map-get($breakpoints, tablet)){
+    @media screen and (max-width: map-get($breakpoints, tablet)) {
         @content;
     }
 }
 
+@mixin hoverable {
+    @media (any-hover: hover) {
+        @content;
+    }
+}
+
+@mixin non-hoverable {
+    @media (any-hover: none) {
+        @content;
+    }
+}

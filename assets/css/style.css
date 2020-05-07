@@ -70,12 +70,13 @@ input, select, textarea {
   appearance: none;
 }
 
-/*a {
-	text-decoration: none;
-	&:hover {
-		text-decoration: none;
-	}
-}*/
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
 /* Basics */
 html, body {
   box-sizing: border-box;
@@ -262,6 +263,9 @@ footer p {
     color: burlywood;
   }
 }
+.button.mobile span {
+  animation: test 1s;
+}
 .button.network .icon {
   transition: color 0.2s ease-in-out;
 }
@@ -296,6 +300,17 @@ footer p {
   background-color: rgba(245, 245, 245, 0.1);
 }
 
+@keyframes test {
+  0% {
+    color: black;
+  }
+  50% {
+    color: burlywood;
+  }
+  100% {
+    color: black;
+  }
+}
 ul {
   list-style: none;
 }

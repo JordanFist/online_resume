@@ -4,11 +4,16 @@
         color: #212931;
         transition: color 0.2s ease-in-out;
     }
-    @media (any-hover: none) {
+    @include non-hoverable {
         &:hover {
             span {
                 color: burlywood;
             }
+        }
+    }
+    &.mobile {
+        span {
+            animation: test 1s;
         }
     }
 
@@ -50,5 +55,17 @@
             color: whitesmoke;
             background-color: rgba(245, 245, 245, 0.1);
         }
+    }
+}
+
+@keyframes test {
+    0% {
+        color: black;
+    }
+    50% {
+        color: burlywood;
+    }
+    100% {
+        color: black;
     }
 }
