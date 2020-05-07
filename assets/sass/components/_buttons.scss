@@ -13,7 +13,7 @@
     }
     &.mobile {
         span {
-            animation: test 0.2s;
+            animation: test 0.1s;
         }
     }
 
@@ -60,15 +60,9 @@
 
 @keyframes test {
     0% {
-        color: black;
-    }
-    20% {
-        color: burlywood;
-    }
-    80% {
         color: burlywood;
     }
     100% {
-        color: black;
+        color: burlywood;
     }
 }

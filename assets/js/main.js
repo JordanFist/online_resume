@@ -155,7 +155,7 @@
 		setTimeout(function(moi) {
 			console.log($moi);
 			$moi.removeClass("mobile");
-		}, 1000);
+		}, 100);
 	});
 
 })(jQuery);

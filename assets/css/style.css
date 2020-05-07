@@ -264,7 +264,7 @@ footer p {
   }
 }
 .button.mobile span {
-  animation: test 0.2s;
+  animation: test 0.1s;
 }
 .button.network .icon {
   transition: color 0.2s ease-in-out;
@@ -302,16 +302,10 @@ footer p {
 
 @keyframes test {
   0% {
-    color: black;
-  }
-  20% {
-    color: burlywood;
-  }
-  80% {
     color: burlywood;
   }
   100% {
-    color: black;
+    color: burlywood;
   }
 }
 ul {
