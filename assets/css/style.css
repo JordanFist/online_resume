@@ -267,6 +267,9 @@ footer p {
   .button span {
     transition: none;
   }
+  .button:active {
+    background: #eee;
+  }
   .button:active span {
     color: burlywood;
   }
