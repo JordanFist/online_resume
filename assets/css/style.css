@@ -350,6 +350,7 @@ ul {
   background-image: url("../../images/background2.jpeg");
   position: fixed;
   background-size: cover;
+  background-position: center;
   height: 100vh;
   width: 100vw;
   z-index: -1;
@@ -359,6 +360,10 @@ ul {
       z-index: 1;
       background-color: map-get($palette, pre-background);
   }*/
+}
+
+.jarallax {
+  background-image: url("../../images/background2.jpeg");
 }
 
 #wrapper .language {

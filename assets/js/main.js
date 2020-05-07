@@ -136,17 +136,19 @@
 	});
 
 	// Disable Jarallax on portable devices
-	/*Breakpoints.get("portable").on("enter", function() {
+	Breakpoints.get("portable").on("enter", function() {
 		jarallax($background, 'destroy');
-		$background.jarallax({
-			speed: 0
-		});
+		$wrapper.unwrap();
+		$body.prepend("<div id='background'></div>");
 	});
 	Breakpoints.get("desktop").on("enter", function() {
-		jarallax($background, 'destroy');
-		$background.jarallax({
+		if (document.getElementById("background")) {
+			$background.remove();
+			$wrapper.wrap("<div class='jarallax'></div>")
+		}
+		$(".jarallax").jarallax({
 			speed: 0.05
 		});
-	});*/
+	});
 
 })(jQuery);

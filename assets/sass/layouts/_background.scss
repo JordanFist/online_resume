@@ -2,6 +2,7 @@
     background-image: url("../../images/background2.jpeg");
     position: fixed;
     background-size: cover;
+    background-position: center;
     height: 100vh;
     width: 100vw;
     z-index: -1;
@@ -13,3 +14,6 @@
     }*/
 }
 
+.jarallax {
+    background-image: url("../../images/background2.jpeg");
+}
