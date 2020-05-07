@@ -502,13 +502,15 @@ nav a.link__active svg {
   .nav-toggle span {
     margin-top: 0;
     margin-right: 0.4rem;
-    transition: color 0.3s ease-in-out;
   }
-  .nav-toggle i {
+  .nav-toggle span, .nav-toggle i {
     transition: color 0.3s ease-in-out;
   }
   .nav-toggle:hover span, .nav-toggle:hover i {
     color: burlywood;
+  }
+  .nav-toggle:focus span, .nav-toggle:focus i {
+    color: inherit;
   }
   .nav-toggle.expanded {
     margin-top: 0.6rem;
@@ -522,6 +524,9 @@ nav a.link__active svg {
   }
   .nav-toggle.expanded:hover i {
     color: burlywood;
+  }
+  .nav-toggle.expanded:focus {
+    color: inherit;
   }
 }
 
@@ -695,9 +700,6 @@ footer .copyright {
   max-width: 200px;
   min-width: 200px;
   z-index: 1;
-}
-.identity .tile__wrapper {
-  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.4));
 }
 .identity .tile__left {
   background-image: radial-gradient(circle at 101.4% 0px, rgba(0, 0, 0, 0) 0, rgba(222, 184, 135, 0) 105px, white 105px);

@@ -21,14 +21,18 @@
         span {
             margin-top: 0;
             margin-right: 0.4rem;
-            transition: color 0.3s ease-in-out;
         }
-        i {
+        span, i {
             transition: color 0.3s ease-in-out;
         }
         &:hover { 
             span, i {
                 color: burlywood;
+            }
+        }
+        &:focus {
+            span, i {
+                color: inherit;
             }
         }
         
@@ -45,6 +49,9 @@
                 i {
                     color: burlywood;
                 }
+            }
+            &:focus {
+                color: inherit;
             }
         }
     }

@@ -2,8 +2,9 @@
 
 	var	$window = $(window),
 		$body = $("body"),
-		$nav = $("nav"),
+		$background = $("#background"),
 		$wrapper = $("#wrapper"),
+		$nav = $("nav"),
 		$nav_toggle = $(".nav-toggle");
 
 	Breakpoints({
@@ -14,6 +15,10 @@
 		tablet: {
 			min: 601,
 			max: 992
+		},
+		portable: {
+			min:0,
+			max:992
 		},
 		desktop: {
 			min: 993,
@@ -128,6 +133,20 @@
 				console.info("navigator.clipboard went wrong");
 			});
 		} 
+	});
+
+	// Disable Jarallax on portable devices
+	Breakpoints.get("portable").on("enter", function() {
+		jarallax($background, 'destroy');
+		$background.jarallax({
+			speed: 0
+		});
+	});
+	Breakpoints.get("desktop").on("enter", function() {
+		jarallax($background, 'destroy');
+		$background.jarallax({
+			speed: 0.05
+		});
 	});
 
 })(jQuery);
