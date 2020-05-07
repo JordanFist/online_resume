@@ -23,11 +23,11 @@
             margin-right: 0.4rem;
         }
         span, i {
-            //transition: color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out;
         }
-        &:active { 
+        &:hover { 
             span, i {
-                color: burlywood;
+                color: burlywood !important;
             }
         }
         
@@ -38,14 +38,25 @@
             }
             i {
                 color: #aaaaaa;
-                //transition: color 0.3s ease-in-out;
+                transition: color 0.3s ease-in-out;
             }
-            &:active {
+            &:hover {
                 i {
-                    color: burlywood;
+                    color: burlywood !important;
                 }
             }
         }
     }
 }
 
+@keyframes hoverColor {
+    0% {
+        color: white;
+    }
+    50% {
+        color: burlywood;
+    }
+    100% {
+        color: white;
+    }
+}

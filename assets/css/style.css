@@ -503,8 +503,11 @@ nav a.link__active svg {
     margin-top: 0;
     margin-right: 0.4rem;
   }
-  .nav-toggle:active span, .nav-toggle:active i {
-    color: burlywood;
+  .nav-toggle span, .nav-toggle i {
+    transition: color 0.3s ease-in-out;
+  }
+  .nav-toggle:hover span, .nav-toggle:hover i {
+    color: burlywood !important;
   }
   .nav-toggle.expanded {
     margin-top: 0.6rem;
@@ -514,12 +517,24 @@ nav a.link__active svg {
   }
   .nav-toggle.expanded i {
     color: #aaaaaa;
+    transition: color 0.3s ease-in-out;
   }
-  .nav-toggle.expanded:active i {
-    color: burlywood;
+  .nav-toggle.expanded:hover i {
+    color: burlywood !important;
   }
 }
 
+@keyframes hoverColor {
+  0% {
+    color: white;
+  }
+  50% {
+    color: burlywood;
+  }
+  100% {
+    color: white;
+  }
+}
 header {
   display: flex;
   flex-direction: column;
