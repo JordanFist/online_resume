@@ -264,8 +264,11 @@ footer p {
   }
 }
 @media (any-hover: none) {
-  .button {
-    -webkit-tap-highlight-color: burlywood;
+  .button span {
+    transition: none;
+  }
+  .button:active span {
+    color: burlywood;
   }
 }
 .button.network .icon {

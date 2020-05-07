@@ -12,7 +12,15 @@
         }
     }
     @include non-hoverable {
-        -webkit-tap-highlight-color: burlywood;
+        span {
+            transition: none;
+        }
+        &:active {
+            span {
+                color: burlywood;
+            }
+            //background: #eee;
+        }
     }
 
     &.network {
