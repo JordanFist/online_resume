@@ -498,29 +498,38 @@ nav a.link__active svg {
     background-color: rgb(255, 255, 255, 0.8);
     padding: 2px 17px 2px 17px;
     box-shadow: 0 0.125rem 0.75rem 0 rgba(30, 37, 45, 0.25);*/
+    /*span, i {
+        transition: color 0.3s ease-in-out;
+    }
+    &:hover { 
+        span, i {
+            color: burlywood;
+        }
+    }*/
   }
   .nav-toggle span {
     margin-top: 0;
     margin-right: 0.4rem;
   }
-  .nav-toggle span, .nav-toggle i {
-    transition: color 0.3s ease-in-out;
-  }
-  .nav-toggle:hover span, .nav-toggle:hover i {
-    color: burlywood !important;
+  .nav-toggle.hover {
+    animation: hoverColor 1s;
   }
   .nav-toggle.expanded {
     margin-top: 0.6rem;
+    /*&:hover {
+        i {
+            color: burlywood !important;
+        }
+    }*/
   }
   .nav-toggle.expanded span {
     display: none;
   }
   .nav-toggle.expanded i {
     color: #aaaaaa;
-    transition: color 0.3s ease-in-out;
   }
-  .nav-toggle.expanded:hover i {
-    color: burlywood !important;
+  .nav-toggle.expanded.hover {
+    animation: hoverColor 1s;
   }
 }
 
