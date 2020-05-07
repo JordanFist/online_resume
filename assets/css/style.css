@@ -510,7 +510,10 @@ nav a.link__active svg {
     color: burlywood;
   }
   .nav-toggle:focus span, .nav-toggle:focus i {
-    color: inherit;
+    color: red;
+  }
+  .nav-toggle:active span, .nav-toggle:active i {
+    color: blue;
   }
   .nav-toggle.expanded {
     margin-top: 0.6rem;
@@ -525,8 +528,11 @@ nav a.link__active svg {
   .nav-toggle.expanded:hover i {
     color: burlywood;
   }
-  .nav-toggle.expanded:focus {
-    color: inherit;
+  .nav-toggle.expanded:focus i {
+    color: red;
+  }
+  .nav-toggle.expanded:active i {
+    color: blue;
   }
 }
 

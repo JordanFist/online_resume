@@ -32,7 +32,12 @@
         }
         &:focus {
             span, i {
-                color: inherit;
+                color: red;
+            }
+        }
+        &:active {
+            span, i {
+                color: blue;
             }
         }
         
@@ -51,7 +56,14 @@
                 }
             }
             &:focus {
-                color: inherit;
+                i {
+                    color: red;
+                }
+            }
+            &:active {
+                i {
+                    color: blue;
+                }
             }
         }
     }
