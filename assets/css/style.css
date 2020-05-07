@@ -265,7 +265,7 @@ footer p {
 }
 @media (any-hover: none) {
   .button {
-    -webkit-tap-highlight-color: red;
+    -webkit-tap-highlight-color: burlywood;
   }
 }
 .button.network .icon {
