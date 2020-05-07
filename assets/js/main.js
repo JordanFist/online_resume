@@ -149,13 +149,4 @@
 		});
 	});
 
-	$(".button").click(function() {
-		$(this).addClass("mobile");
-		var $moi = $(this)
-		setTimeout(function(moi) {
-			console.log($moi);
-			$moi.removeClass("mobile");
-		}, 100);
-	});
-
 })(jQuery);

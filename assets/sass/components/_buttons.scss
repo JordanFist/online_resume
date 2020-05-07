@@ -4,17 +4,15 @@
         color: #212931;
         transition: color 0.2s ease-in-out;
     }
-    @include non-hoverable {
+    @include hoverable {
         &:hover {
             span {
                 color: burlywood;
             }
         }
     }
-    &.mobile {
-        span {
-            animation: test 0.1s;
-        }
+    @include non-hoverable {
+        -webkit-tap-highlight-color: red;
     }
 
     &.network {
@@ -58,11 +56,3 @@
     }
 }
 
-@keyframes test {
-    0% {
-        color: burlywood;
-    }
-    100% {
-        color: burlywood;
-    }
-}

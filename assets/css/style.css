@@ -258,13 +258,15 @@ footer p {
   color: #212931;
   transition: color 0.2s ease-in-out;
 }
-@media (any-hover: none) {
+@media (any-hover: hover) {
   .button:hover span {
     color: burlywood;
   }
 }
-.button.mobile span {
-  animation: test 0.1s;
+@media (any-hover: none) {
+  .button {
+    -webkit-tap-highlight-color: red;
+  }
 }
 .button.network .icon {
   transition: color 0.2s ease-in-out;
@@ -300,14 +302,6 @@ footer p {
   background-color: rgba(245, 245, 245, 0.1);
 }
 
-@keyframes test {
-  0% {
-    color: burlywood;
-  }
-  100% {
-    color: burlywood;
-  }
-}
 ul {
   list-style: none;
 }
