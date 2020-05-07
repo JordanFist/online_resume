@@ -1,4 +1,10 @@
 #background {
+    background-image: url("../../images/background2.jpeg");
+    position: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
     transition: background-color 3s ease-in;
     transition-delay: 1s;
     /*body.is-preload & {
