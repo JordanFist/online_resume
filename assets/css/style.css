@@ -70,13 +70,12 @@ input, select, textarea {
   appearance: none;
 }
 
-a {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
-}
-
+/*a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}*/
 /* Basics */
 html, body {
   box-sizing: border-box;
