@@ -13,7 +13,7 @@
     }
     &.mobile {
         span {
-            animation: test 1s;
+            animation: test 0.2s;
         }
     }
 
@@ -62,7 +62,10 @@
     0% {
         color: black;
     }
-    50% {
+    20% {
+        color: burlywood;
+    }
+    80% {
         color: burlywood;
     }
     100% {
