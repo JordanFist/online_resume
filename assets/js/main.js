@@ -136,7 +136,7 @@
 	});
 
 	// Disable Jarallax on portable devices
-	Breakpoints.get("portable").on("enter", function() {
+	/*Breakpoints.get("portable").on("enter", function() {
 		jarallax($background, 'destroy');
 		$background.jarallax({
 			speed: 0
@@ -147,6 +147,6 @@
 		$background.jarallax({
 			speed: 0.05
 		});
-	});
+	});*/
 
 })(jQuery);
