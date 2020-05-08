@@ -261,19 +261,19 @@ footer p {
   color: #212931;
   transition: color 0.2s ease-in-out;
 }
-@media (any-hover: hover) {
+@media (any-hover: none) {
   .button:hover span {
     color: burlywood;
   }
 }
-@media (any-hover: none) {
-  .button {
-    /*span {
-        transition: none;
-    }*/
+@media (any-hover: hover) {
+  .button span {
+    transition: none;
   }
   .button:active {
-    background-color: #eeeeee;
+    background-color: rgba(187, 187, 187, 0.5);
+    border-radius: 5px;
+    padding: 3px;
   }
   .button:active span {
     color: burlywood;
