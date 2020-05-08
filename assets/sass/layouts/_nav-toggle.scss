@@ -60,7 +60,7 @@
             }
             @include non-hoverable {
                 i {
-                    transition: none;
+                    transition: color 0.3s ease-in-out;
                 }
                 &:active {
                     i {

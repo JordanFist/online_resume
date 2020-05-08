@@ -564,7 +564,7 @@ nav a.link__active svg {
 }
 @media screen and (max-width: 1200px) and (any-hover: none) {
   .nav-toggle.expanded i {
-    transition: none;
+    transition: color 0.3s ease-in-out;
   }
   .nav-toggle.expanded:active i {
     color: burlywood !important;
