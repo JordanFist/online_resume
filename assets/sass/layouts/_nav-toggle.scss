@@ -54,7 +54,7 @@
             @include hoverable {
                 &:hover {
                     i {
-                        color: burlywood !important;
+                        color: burlywood;
                     }
                 }
             }
@@ -64,7 +64,7 @@
                 }
                 &:active {
                     i {
-                        color: burlywood !important;
+                        color: burlywood;
                     }
                 }
             }

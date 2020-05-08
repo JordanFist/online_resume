@@ -277,8 +277,18 @@ footer p {
 .button.network .icon {
   transition: color 0.2s ease-in-out;
 }
-.button.network:hover .icon {
-  color: burlywood;
+@media (any-hover: hover) {
+  .button.network:hover .icon {
+    color: burlywood;
+  }
+}
+@media (any-hover: none) {
+  .button.network .icon {
+    transition: none;
+  }
+  .button.network:active .icon {
+    color: burlywood;
+  }
 }
 .button.flag span {
   font-size: 0.75rem;
@@ -559,7 +569,7 @@ nav a.link__active svg {
 }
 @media screen and (max-width: 1200px) and (any-hover: hover) {
   .nav-toggle.expanded:hover i {
-    color: burlywood !important;
+    color: burlywood;
   }
 }
 @media screen and (max-width: 1200px) and (any-hover: none) {
@@ -567,7 +577,7 @@ nav a.link__active svg {
     transition: color 0.3s ease-in-out;
   }
   .nav-toggle.expanded:active i {
-    color: burlywood !important;
+    color: burlywood;
   }
 }
 

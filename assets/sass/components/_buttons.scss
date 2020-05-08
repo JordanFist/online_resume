@@ -26,8 +26,18 @@
         .icon {
             transition: color 0.2s ease-in-out;
         }
-        &:hover .icon {
-            color: burlywood;
+        @include hoverable {
+            &:hover .icon {
+                color: burlywood;
+            }
+        }
+        @include non-hoverable {
+            .icon {
+                transition: none;
+            }
+            &:active .icon {
+                color: burlywood;
+            }
         }
     }
     &.flag { 
