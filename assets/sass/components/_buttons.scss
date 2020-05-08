@@ -12,9 +12,10 @@
         }
     }
     @include non-hoverable {
-        span {
+        /*span {
             transition: none;
-        }
+        }*/
+        background-color: #eeeeee;
         &:active {
             span {
                 color: burlywood;
@@ -29,13 +30,6 @@
         @include hoverable {
             &:hover .icon {
                 color: burlywood;
-            }
-        }
-        @include non-hoverable {
-            &.tapped {
-                i {
-                    animation: tapped 1s;
-                }
             }
         }
     }

@@ -124,7 +124,7 @@
 	});
 
 	// Display the infobulle and copy my mail in the clipboard
-	$(".contact__mail").on("click touchstart",function() {
+	$(".contact__mail").on("click touchstart", function() {
 		if (!$(".contact__mail").hasClass("copied")) {
 			navigator.clipboard.writeText("jsandri@enseirb-matmeca.fr").then(function() {
 				$(".contact__mail").attr("aria-label", "Copied");
@@ -167,12 +167,12 @@
 	});
 
 	//test 
-	$(".contact a").on("click touchstart", function() {
+	/*$(".contact a").on("click touchstart", function() {
 		$(this).addClass("tapped");
 		var $test=$(this);
 		setTimeout(function() {
 			$test.removeClass("tapped");
 		}, 1000);
-	});
+	});*/
 
 })(jQuery);

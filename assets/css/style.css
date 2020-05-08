@@ -267,8 +267,11 @@ footer p {
   }
 }
 @media (any-hover: none) {
-  .button span {
-    transition: none;
+  .button {
+    /*span {
+        transition: none;
+    }*/
+    background-color: #eeeeee;
   }
   .button:active span {
     color: burlywood;
@@ -280,11 +283,6 @@ footer p {
 @media (any-hover: hover) {
   .button.network:hover .icon {
     color: burlywood;
-  }
-}
-@media (any-hover: none) {
-  .button.network.tapped i {
-    animation: tapped 1s;
   }
 }
 .button.flag span {
