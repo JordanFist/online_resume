@@ -26,17 +26,16 @@
         .icon {
             transition: color 0.2s ease-in-out;
         }
-        @include hoverable {
+        @include non-hoverable {
             &:hover .icon {
                 color: burlywood;
             }
         }
-        @include non-hoverable {
-            .icon {
-                transition: none;
-            }
-            &:active .icon {
-                color: burlywood;
+        @include hoverable {
+            &.tapped {
+                i {
+                    animation: tapped 1s;
+                }
             }
         }
     }
@@ -73,3 +72,17 @@
     }
 }
 
+@keyframes tapped {
+    0% {
+        color: white;
+    }
+    20% {
+        color: burlywood;
+    }
+    80% {
+        color: burlywood;
+    }
+    100% {
+        color: white;
+    }
+}

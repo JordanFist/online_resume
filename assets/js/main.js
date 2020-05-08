@@ -166,4 +166,12 @@
 		}
 	});
 
+	//test 
+	$(".contact__mail").click(function() {
+		$(this).addClass("tapped");
+		setTimeout(function() {
+			$(".contact__mail").removeClass("tapped");
+		}, 1000);
+	});
+
 })(jQuery);
