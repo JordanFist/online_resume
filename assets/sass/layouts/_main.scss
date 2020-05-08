@@ -9,7 +9,7 @@
         margin: 0 4rem;
     }
     @include small-mobile {
-        margin: 0;
+        margin: -1rem;
     }
     /*body.is-preload & {
         opacity: 0;

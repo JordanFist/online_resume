@@ -613,7 +613,7 @@ header .content .inner {
 }
 @media screen and (max-width: 388px) {
   #main {
-    margin: 0;
+    margin: -1rem;
   }
 }
 
