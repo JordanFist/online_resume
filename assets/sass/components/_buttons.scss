@@ -94,8 +94,15 @@
             .icon {
                 color: #aaaaaa;
             }
-            &:hover .icon {
-                color: burlywood;
+            @include hoverable {
+                &:hover .icon {
+                    color: burlywood;
+                }
+            }
+            @include non-hoverable {
+                &:active .icon {
+                    color: burlywood;
+                }
             }
         }
     }

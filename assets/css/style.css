@@ -342,8 +342,15 @@ footer p {
 .button.toggle.expanded .icon {
   color: #aaaaaa;
 }
-.button.toggle.expanded:hover .icon {
-  color: burlywood;
+@media (any-hover: hover) {
+  .button.toggle.expanded:hover .icon {
+    color: burlywood;
+  }
+}
+@media (any-hover: none) {
+  .button.toggle.expanded:active .icon {
+    color: burlywood;
+  }
 }
 .button.resume {
   padding: 0;
