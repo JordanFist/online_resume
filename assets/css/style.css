@@ -435,8 +435,9 @@ nav a.link__active svg {
 @media screen and (max-width: 1200px) {
   nav {
     top: 0;
-    bottom: 0;
     right: 0;
+    height: 100vh;
+    overflow: scroll;
     text-align: left;
     background-color: white;
     padding: 3rem 6rem 0 2rem;
