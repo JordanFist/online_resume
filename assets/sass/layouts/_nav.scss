@@ -42,7 +42,7 @@ nav {
             }
         }
     }
-    @include tablet {
+    @include tablet-landscape {
         top: 0;
         bottom: 0;
         right: 0;

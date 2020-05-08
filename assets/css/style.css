@@ -432,7 +432,7 @@ nav a.link__active span {
 nav a.link__active svg {
   fill: #000000;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   nav {
     top: 0;
     bottom: 0;
@@ -502,7 +502,7 @@ nav a.link__active svg {
 .nav-toggle {
   display: none;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .nav-toggle {
     display: flex;
     align-items: center;
