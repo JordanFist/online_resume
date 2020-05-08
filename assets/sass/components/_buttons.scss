@@ -26,12 +26,12 @@
         .icon {
             transition: color 0.2s ease-in-out;
         }
-        @include non-hoverable {
+        @include hoverable {
             &:hover .icon {
                 color: burlywood;
             }
         }
-        @include hoverable {
+        @include non-hoverable {
             &.tapped {
                 i {
                     animation: tapped 1s;

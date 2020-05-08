@@ -277,12 +277,12 @@ footer p {
 .button.network .icon {
   transition: color 0.2s ease-in-out;
 }
-@media (any-hover: none) {
+@media (any-hover: hover) {
   .button.network:hover .icon {
     color: burlywood;
   }
 }
-@media (any-hover: hover) {
+@media (any-hover: none) {
   .button.network.tapped i {
     animation: tapped 1s;
   }
