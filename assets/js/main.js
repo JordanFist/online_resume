@@ -167,10 +167,11 @@
 	});
 
 	//test 
-	$(".contact__mail").on("click touchstart", function() {
+	$(".contact a").on("click touchstart", function() {
 		$(this).addClass("tapped");
+		var $test=$(this);
 		setTimeout(function() {
-			$(".contact__mail").removeClass("tapped");
+			$test.removeClass("tapped");
 		}, 1000);
 	});
 
