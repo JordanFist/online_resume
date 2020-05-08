@@ -531,9 +531,21 @@ nav a.link__active svg {
   .nav-toggle span, .nav-toggle i {
     transition: color 0.3s ease-in-out;
   }
+}
+@media screen and (max-width: 1200px) and (any-hover: hover) {
   .nav-toggle:hover span, .nav-toggle:hover i {
     color: burlywood;
   }
+}
+@media screen and (max-width: 1200px) and (any-hover: none) {
+  .nav-toggle span, .nav-toggle i {
+    transition: none;
+  }
+  .nav-toggle:active span, .nav-toggle:active i {
+    color: burlywood;
+  }
+}
+@media screen and (max-width: 1200px) {
   .nav-toggle.expanded {
     margin-top: 0.6rem;
   }
@@ -544,7 +556,17 @@ nav a.link__active svg {
     color: #aaaaaa;
     transition: color 0.3s ease-in-out;
   }
+}
+@media screen and (max-width: 1200px) and (any-hover: hover) {
   .nav-toggle.expanded:hover i {
+    color: burlywood !important;
+  }
+}
+@media screen and (max-width: 1200px) and (any-hover: none) {
+  .nav-toggle.expanded i {
+    transition: none;
+  }
+  .nav-toggle.expanded:active i {
     color: burlywood !important;
   }
 }

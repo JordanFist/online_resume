@@ -25,12 +25,23 @@
         span, i {
             transition: color 0.3s ease-in-out;
         }
-        &:hover { 
-            span, i {
-                color: burlywood;
+        @include hoverable {
+            &:hover { 
+                span, i {
+                    color: burlywood;
+                }
             }
         }
-
+        @include non-hoverable {
+            span, i {
+                transition: none;
+            }
+            &:active { 
+                span, i {
+                    color: burlywood;
+                }
+            }
+        }
         &.expanded {
             margin-top: 0.6rem;
             span {
@@ -40,9 +51,21 @@
                 color: #aaaaaa;
                 transition: color 0.3s ease-in-out;
             }
-            &:hover {
+            @include hoverable {
+                &:hover {
+                    i {
+                        color: burlywood !important;
+                    }
+                }
+            }
+            @include non-hoverable {
                 i {
-                    color: burlywood !important;
+                    transition: none;
+                }
+                &:active {
+                    i {
+                        color: burlywood !important;
+                    }
                 }
             }
         }
