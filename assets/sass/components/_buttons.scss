@@ -1,43 +1,61 @@
 .button {
     cursor: pointer;
-    padding: 3px;
+    padding: 2px;
     span {
         color: #212931;
-        transition: color 0.2s ease-in-out;
     }
-    @include hoverable {
+    @include hoverable { //hoverable
+        span, .icon {
+            transition: color 0.2s ease-in-out;
+        }
         &:hover {
-            span {
+            span, .icon {
                 color: burlywood;
             }
         }
     }
-    @include non-hoverable {
-        span {
-            transition: none;
-        }
+    @include non-hoverable { //non-hoverable
         &:active {
-            background-color: rgb(#eeeeee, 0.7);
+            background-color: rgb(#eeeeee, 0.6);
             border-radius: 3px;
-            span {
+            span, .icon {
                 color: burlywood;
             }
         }
     }
 
     &.network {
-        padding: 0;
-        .icon {
-            transition: color 0.2s ease-in-out;
-        }
+        display: flex;
+    }
+
+    &.nav-network {
+        display: flex;
+        border: 2px solid #eeeeee;
+        border-radius: 50%;
+        margin-right: 0.8rem;
+        transition: border-color 0.2s ease-in-out;
+        line-height: 1rem;
+        height: 2rem;
+        width: 2rem;
         @include hoverable {
-            &:hover .icon {
-                color: burlywood;
+            &:hover {
+                border-color: burlywood;
+            }
+        }
+        @include non-hoverable {
+            transition: none;
+            &:active {
+                border-color: burlywood;
             }
         }
     }
+
     &.flag { 
-        padding: 0;
+        @include hoverable { 
+            &:active {
+                background-color: rgb(#cccccc, 0.5);
+            }
+        }
         span {
             font-size: 0.75rem;
             margin-left: 0.3rem;
@@ -45,6 +63,40 @@
         &.active span {
             color: burlywood;
             font-weight: bold;
+        }
+    }
+
+    &.toggle {
+        span {
+            color: white;
+            margin-top: 0;
+            margin-right: 0.4rem;
+        }
+        @include hoverable {
+            &:hover {
+                span {
+                    color: burlywood;
+                }
+            }
+        }
+        @include non-hoverable {
+            &:active {
+                span {
+                    color: burlywood;
+                }
+            }
+        }
+        &.expanded {
+            margin-top: 0.6rem;
+            span {
+                display: none;
+            }
+            .icon {
+                color: #aaaaaa;
+            }
+            &:hover .icon {
+                color: burlywood;
+            }
         }
     }
     
