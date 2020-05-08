@@ -5,14 +5,14 @@
         color: #212931;
         transition: color 0.2s ease-in-out;
     }
-    @include non-hoverable {
+    @include hoverable {
         &:hover {
             span {
                 color: burlywood;
             }
         }
     }
-    @include hoverable {
+    @include non-hoverable {
         span {
             transition: none;
         }
