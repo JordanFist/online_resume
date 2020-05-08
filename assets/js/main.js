@@ -167,7 +167,7 @@
 	});
 
 	//test 
-	$(".contact__mail").click(function() {
+	$(".contact__mail").on("click touchstart", function() {
 		$(this).addClass("tapped");
 		setTimeout(function() {
 			$(".contact__mail").removeClass("tapped");
