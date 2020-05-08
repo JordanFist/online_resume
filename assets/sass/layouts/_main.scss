@@ -8,7 +8,7 @@
     @include tablet {
         margin: 0 4rem;
     }
-    @include mobile {
+    @include small-mobile {
         margin: 0;
     }
     /*body.is-preload & {

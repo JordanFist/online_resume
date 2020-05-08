@@ -23,9 +23,9 @@ $font: (
 );
 
 //Breakpoints
-// Based on https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+// Based on https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/ and https://getbootstrap.com/docs/4.1/layout/overview/ 
 $breakpoints: (
-	small-mobile: 400px,
+	small-mobile: 388px,
 	mobile: 576px,
 	tablet: 992px,
 	tablet-landscape: 1200px

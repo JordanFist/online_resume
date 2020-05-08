@@ -611,7 +611,7 @@ header .content .inner {
     margin: 0 4rem;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 388px) {
   #main {
     margin: 0;
   }
