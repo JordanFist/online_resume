@@ -55,7 +55,7 @@
 		}, 200);
 	});
 
-	// Open up the navbar on mobile
+	// Manage the opening and closing of the navbar on mobile
 	$nav_toggle.click(function() {
 
 		if ($nav_toggle.hasClass("expanded")) {

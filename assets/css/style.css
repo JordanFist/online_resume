@@ -237,8 +237,10 @@ footer p {
   transition: transform 0.2s ease-out;
   width: 100%;
 }
-.image.framed:hover {
-  transform: scale(1.05);
+@media (any-hover: hover) {
+  .image.framed:hover {
+    transform: scale(1.05);
+  }
 }
 .image.full-width {
   width: 100%;
@@ -440,7 +442,7 @@ nav a.link__active svg {
     overflow: scroll;
     text-align: left;
     background-color: white;
-    padding: 3rem 6rem 0 2rem;
+    padding: 3rem 6rem 3rem 2rem;
     transform: translateX(100%);
     z-index: 101;
   }

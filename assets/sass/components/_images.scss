@@ -31,8 +31,10 @@
         vertical-align: bottom;
         transition: transform 0.2s ease-out;
         width: 100%;
-        &:hover {
-            transform: scale(1.05);
+        @include hoverable {
+            &:hover {
+                transform: scale(1.05);
+            }
         }
     }
     &.full-width {
