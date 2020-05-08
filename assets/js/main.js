@@ -124,7 +124,7 @@
 	});
 
 	// Display the infobulle and copy my mail in the clipboard
-	$(".contact__mail").click(function() {
+	$(".contact__mail").on("click touchstart",function() {
 		if (!$(".contact__mail").hasClass("copied")) {
 			navigator.clipboard.writeText("jsandri@enseirb-matmeca.fr").then(function() {
 				$(".contact__mail").attr("aria-label", "Copied");
