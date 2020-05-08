@@ -156,4 +156,14 @@
 		});
 	});
 
+	// Fix balloon size for mobile devices
+	Breakpoints.get("mobile").on({
+		enter: function() {
+			$(".balloon--resized").attr("data-balloon-length", "medium");
+		},
+		leave: function() {
+			$(".balloon--resized").attr("data-balloon-length", "");
+		}
+	});
+
 })(jQuery);
