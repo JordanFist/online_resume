@@ -256,28 +256,31 @@ footer p {
 
 .button {
   cursor: pointer;
+  padding: 3px;
 }
 .button span {
   color: #212931;
   transition: color 0.2s ease-in-out;
 }
-@media (any-hover: hover) {
+@media (any-hover: none) {
   .button:hover span {
     color: burlywood;
   }
 }
-@media (any-hover: none) {
+@media (any-hover: hover) {
   .button span {
     transition: none;
   }
   .button:active {
-    background-color: rgba(187, 187, 187, 0.5);
-    border-radius: 5px;
-    padding: 3px;
+    background-color: rgba(238, 238, 238, 0.7);
+    border-radius: 3px;
   }
   .button:active span {
     color: burlywood;
   }
+}
+.button.network {
+  padding: 0;
 }
 .button.network .icon {
   transition: color 0.2s ease-in-out;
@@ -286,6 +289,9 @@ footer p {
   .button.network:hover .icon {
     color: burlywood;
   }
+}
+.button.flag {
+  padding: 0;
 }
 .button.flag span {
   font-size: 0.75rem;
@@ -296,6 +302,7 @@ footer p {
   font-weight: bold;
 }
 .button.resume {
+  padding: 0;
   display: inline-block;
   font-weight: 600;
   font-size: 1.2rem;

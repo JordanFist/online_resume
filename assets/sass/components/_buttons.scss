@@ -1,24 +1,24 @@
 .button {
     cursor: pointer;
+    padding: 3px;
     span {
         color: #212931;
         transition: color 0.2s ease-in-out;
     }
-    @include hoverable {
+    @include non-hoverable {
         &:hover {
             span {
                 color: burlywood;
             }
         }
     }
-    @include non-hoverable {
+    @include hoverable {
         span {
             transition: none;
         }
         &:active {
-            background-color: rgb(#bbbbbb, 0.5);
-            border-radius: 5px;
-            padding: 3px;
+            background-color: rgb(#eeeeee, 0.7);
+            border-radius: 3px;
             span {
                 color: burlywood;
             }
@@ -26,6 +26,7 @@
     }
 
     &.network {
+        padding: 0;
         .icon {
             transition: color 0.2s ease-in-out;
         }
@@ -36,6 +37,7 @@
         }
     }
     &.flag { 
+        padding: 0;
         span {
             font-size: 0.75rem;
             margin-left: 0.3rem;
@@ -47,6 +49,7 @@
     }
     
     &.resume {
+        padding: 0;
         display: inline-block;
         font-weight: 600;
         font-size: 1.2rem;
