@@ -8,8 +8,8 @@
     @include tablet {
         margin: 0 4rem;
     }
-    @include small-mobile {
-        margin: -1rem;
+    @include mobile {
+        margin: 0;
     }
     /*body.is-preload & {
         opacity: 0;
