@@ -7,21 +7,26 @@
 		$nav = $("nav"),
 		$nav_toggle = $(".nav-toggle");
 
+	// Breakpoints
 	Breakpoints({
 		mobile: {
 			min: 0,
-			max: 600
+			max: 576
 		},
 		tablet: {
-			min: 601,
+			min: 577,
 			max: 992
 		},
+		tablet_landscape: {
+			min: 993,
+			max: 1200
+		},
 		portable: {
-			min:0,
-			max:992
+			min: 0,
+			max: 1200
 		},
 		desktop: {
-			min: 993,
+			min: 1201,
 			max: Infinity
 		}
 	});
@@ -36,7 +41,7 @@
 	// Display the right year in the footer
 	var date =  new Date();
 
-	$(".copyright__year").html(date.getFullYear())
+	$(".copyright__year").html(date.getFullYear());
 
 	// Display the section in the navigation while hovering
 	$("nav ul a").hover(function() {

@@ -5,6 +5,9 @@
     margin: 0 map-get($size, main-margin);
     transition: opacity 1s ease-in-out;
     transition-delay: 1s;
+    @include tablet-landscape {
+        margin: 0 2rem;
+    }
     @include tablet {
         margin: 0 4rem;
     }

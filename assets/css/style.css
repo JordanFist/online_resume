@@ -375,7 +375,7 @@ ul {
 #wrapper .language a {
   margin-left: 1rem;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   #wrapper .language {
     display: none;
   }
@@ -605,6 +605,11 @@ header .content .inner {
 }
 #main :nth-child(6) {
   margin-bottom: 0;
+}
+@media screen and (max-width: 1200px) {
+  #main {
+    margin: 0 2rem;
+  }
 }
 @media screen and (max-width: 992px) {
   #main {

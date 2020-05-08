@@ -7,7 +7,7 @@
         a {
             margin-left: 1rem;
         }
-        @include tablet {
+        @include tablet-landscape {
             display: none;
         }
     }
