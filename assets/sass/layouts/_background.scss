@@ -1,13 +1,23 @@
 #background {
-    background-image: url("../../images/background2.jpeg");
-    background-attachment: fixed;
+    background: url("../../images/background2.jpeg");
+    position: fixed;
     background-size: cover;
     background-position: center;
-    //height: 100vh;
-    //width: 100vw;
+    -webkit-backface-visibility: hidden;
+    height: 100vh;
+    width: 100%;
     z-index: -1;
     transition: background-color 3s ease-in;
     transition-delay: 1s;
+    &:before, &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
     /*body.is-preload & {
         z-index: 1;
         background-color: map-get($palette, pre-background);
