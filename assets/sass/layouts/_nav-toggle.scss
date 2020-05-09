@@ -2,25 +2,33 @@
     display: none;
 
     @include tablet-landscape {
-        position: fixed;
-        top: 0.8rem;
-        right: 0.5rem;
-        display: flex;
-        align-items: center;
-        z-index: 102;
-        font-size: 0.9rem;
-        font-weight: bold;
-        font-family: "Source Sans Pro";
-        padding: 0.125rem 1rem 0.125rem 1rem;
-        filter: drop-shadow(0px 0px 8px rgb(0, 0, 0, 0.25));
-        transition: background-color 0.2s ease-in-out, box-shadow 0.4s ease-in-out;
-        &.alt {
-            span,.icon {
-                color: #212931;
+        &.opening {
+            position: fixed;
+            top: 1.4rem;
+            right: 0.5rem;
+            display: flex;
+            align-items: center;
+            z-index: 9;
+            font-size: 0.9rem;
+            font-weight: bold;
+            font-family: "Source Sans Pro";
+            line-height: 0;
+            padding: 0.7rem 1.1rem 0.7rem 1.1rem;
+            filter: drop-shadow(0px 0px 8px rgb(0, 0, 0, 0.25));
+            transition: background-color 0.2s ease-in-out, box-shadow 0.4s ease-in-out;
+            &.alt {
+                span,.icon {
+                    color: #212931;
+                }
+                filter: none;
+                background-color: rgb(255, 255, 255, 0.8);
+                box-shadow: 0 0.125rem 0.75rem rgba(#212931, 0.15);
             }
-            filter: none;
-            background-color: rgb(255, 255, 255, 0.8);
-            box-shadow: 0 0.125rem 0.75rem rgba(#212931, 0.15);
+        }
+        &.closing {
+            display: inline;
+            position: relative;
+            left: 12.2rem;
         }
     }
 }

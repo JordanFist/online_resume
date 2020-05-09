@@ -193,8 +193,11 @@ footer p {
   font-size: 1rem;
   margin: auto auto;
 }
-.icon.toggle {
+.icon.opening {
   color: white;
+}
+.icon.closing {
+  color: #aaaaaa;
 }
 .icon.semi-circled {
   font-size: 2.4rem;
@@ -320,7 +323,6 @@ footer p {
 }
 .button.toggle span {
   color: white;
-  margin-top: 0;
   margin-right: 0.4rem;
 }
 @media (any-hover: hover) {
@@ -330,25 +332,6 @@ footer p {
 }
 @media (any-hover: none) {
   .button.toggle:active span {
-    color: burlywood;
-  }
-}
-.button.toggle.expanded {
-  margin-top: 0.6rem;
-}
-.button.toggle.expanded span {
-  display: none;
-}
-.button.toggle.expanded .icon {
-  color: #aaaaaa;
-}
-@media (any-hover: hover) {
-  .button.toggle.expanded:hover .icon {
-    color: burlywood;
-  }
-}
-@media (any-hover: none) {
-  .button.toggle.expanded:active .icon {
     color: burlywood;
   }
 }
@@ -477,7 +460,7 @@ ul {
   right: 0;
   left: 0;
   background: rgba(33, 41, 49, 0.5);
-  z-index: 100;
+  z-index: 10;
 }
 
 nav {
@@ -527,12 +510,12 @@ nav a.link__active svg {
     top: 0;
     right: 0;
     height: 100vh;
-    overflow: scroll;
     text-align: left;
     background-color: white;
-    padding: 3rem 6rem 3rem 2rem;
+    padding: 0.8rem 6rem 3rem 2rem;
     transform: translateX(100%);
-    z-index: 101;
+    overflow: scroll;
+    z-index: 11;
   }
   nav.expanded {
     animation: slideInRight 0.4s ease-in-out forwards;
@@ -578,27 +561,33 @@ nav a.link__active svg {
   display: none;
 }
 @media screen and (max-width: 1200px) {
-  .nav-toggle {
+  .nav-toggle.opening {
     position: fixed;
-    top: 0.8rem;
+    top: 1.4rem;
     right: 0.5rem;
     display: flex;
     align-items: center;
-    z-index: 102;
+    z-index: 9;
     font-size: 0.9rem;
     font-weight: bold;
     font-family: "Source Sans Pro";
-    padding: 0.125rem 1rem 0.125rem 1rem;
+    line-height: 0;
+    padding: 0.7rem 1.1rem 0.7rem 1.1rem;
     filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.25));
     transition: background-color 0.2s ease-in-out, box-shadow 0.4s ease-in-out;
   }
-  .nav-toggle.alt {
+  .nav-toggle.opening.alt {
     filter: none;
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0.125rem 0.75rem rgba(33, 41, 49, 0.15);
   }
-  .nav-toggle.alt span, .nav-toggle.alt .icon {
+  .nav-toggle.opening.alt span, .nav-toggle.opening.alt .icon {
     color: #212931;
+  }
+  .nav-toggle.closing {
+    display: inline;
+    position: relative;
+    left: 12.2rem;
   }
 }
 

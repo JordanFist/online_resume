@@ -46,12 +46,12 @@ nav {
         top: 0;
         right: 0;
         height: 100vh;
-        overflow: scroll;
         text-align: left;
         background-color: white;
-        padding: 3rem 6rem 3rem 2rem;
+        padding: 0.8rem 6rem 3rem 2rem;
         transform: translateX(100%);
-        z-index: 101;
+        overflow: scroll;
+        z-index: 11;
         &.expanded {
             animation: slideInRight 0.4s ease-in-out forwards;
             box-shadow: 0 0 1.5rem 0 rgba(0,0,0,0.2);

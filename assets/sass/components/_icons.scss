@@ -16,8 +16,11 @@
         font-size: 1rem;
         margin: auto auto;
     }
-    &.toggle {
+    &.opening {
         color: white;
+    }
+    &.closing {
+        color: #aaaaaa;
     }
     &.semi-circled {
         font-size: 2.4rem;

@@ -8,7 +8,8 @@
 		$background = $("#background"),
 		$wrapper = $("#wrapper"),
 		$nav = $("nav"),
-		$nav_toggle = $(".nav-toggle");
+		$nav_toggle_closing = $("#nav-toggle-closing"),
+		$nav_toggle_opening = $("#nav-toggle-opening");
 
 	// Breakpoints
 	Breakpoints({
@@ -58,31 +59,23 @@
 		}, 200);
 	});
 
-	// Manage the opening and closing of the navbar on mobile
-	$nav_toggle.click(function() {
+	// Manage the opening of the navbar on mobile
+	$nav_toggle_opening.click(function() {
+		$wrapper.prepend("<div id='overlay'></div>");
+		$("#overlay").hide().fadeIn(400);
+		$nav.addClass("expanded");
+	});
 
-		if ($nav_toggle.hasClass("expanded")) {
-			$("#overlay").fadeOut(400, function() {
-				$(this).remove();
-			});
-			$nav.removeClass("expanded");
-			$nav_toggle.removeClass("expanded");
-			$nav_toggle.children("i").removeClass("fa-times").addClass("fa-bars");
-
-			$nav.addClass("hidden");
-			$nav_toggle.addClass("hidden");
-			setTimeout(function() {
-				$nav.removeClass("hidden");
-				$nav_toggle.removeClass("hidden");
-			}, 300);
-		} else {
-			$nav_toggle.children("i").removeClass("fa-bars").addClass("fa-times");
-			$wrapper.prepend("<div id='overlay'></div>");
-			$("#overlay").hide().fadeIn(400);
-
-			$nav.addClass("expanded");
-			$nav_toggle.addClass("expanded");
-		}
+	// Manage the closing of the navbar on mobile
+	$nav_toggle_closing.click(function() {
+		$("#overlay").fadeOut(400, function() {
+			$(this).remove();
+		});
+		$nav.removeClass("expanded");
+		$nav.addClass("hidden");
+		setTimeout(function() {
+			$nav.removeClass("hidden");
+		}, 300);
 	});
 
 	// Display the section in the navigation while scrolling
@@ -171,10 +164,10 @@
 	$header.scrollex({
 		bottom: "5vh",
 		enter: 		function() {
-			$nav_toggle.removeClass("alt");
+			$nav_toggle_opening.removeClass("alt");
 		},
 		leave:		function() {
-			$nav_toggle.addClass("alt");
+			$nav_toggle_opening.addClass("alt");
 		}
 	});
 
