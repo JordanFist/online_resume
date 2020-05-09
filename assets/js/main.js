@@ -141,7 +141,7 @@
 	});
 
 	// Disable Jarallax on portable devices
-	Breakpoints.get("portable").on("enter", function() {
+	/*Breakpoints.get("portable").on("enter", function() {
 		jarallax($background, 'destroy');
 		$wrapper.unwrap();
 		$body.prepend("<div id='background'></div>");
@@ -154,7 +154,7 @@
 		$(".jarallax").jarallax({
 			speed: 0.05
 		});
-	});
+	});*/
 
 	// Fix balloon size for mobile devices
 	Breakpoints.get("mobile").on({
