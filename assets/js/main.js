@@ -129,7 +129,7 @@
 	// Display the infobulle and copy my mail in the clipboard
 	new ClipboardJS(".contact__mail");
 
-	$(".contact__mail").on("click touchstart", function() {
+	$(".contact__mail").on("click", function() {
 		if (!$(".contact__mail").hasClass("copied")) {
 			$(".contact__mail").attr("aria-label", "Copied!");
 			$(".contact__mail").addClass("copied");
