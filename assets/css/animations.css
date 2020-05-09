@@ -55,8 +55,11 @@
     }
     from {
       opacity: 0;
-      transform: scale3d(0.5, 0.5, 0.5);
-      padding: 0.1px; /* Fix vanishing balloon bug */
+      transform: scale3d(0.3, 0.3, 0.3);
+      /* Fix the vanishing balloon bug */
+      height: 54px;   
+      width: 54px;
+      color: burlywood;
     }
   
     20% {

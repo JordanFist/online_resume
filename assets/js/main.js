@@ -131,7 +131,7 @@
 
 	$(".contact__mail").on("click touchstart", function() {
 		if (!$(".contact__mail").hasClass("copied")) {
-			$(".contact__mail").attr("aria-label", "Copied");
+			$(".contact__mail").attr("aria-label", "Copied!");
 			$(".contact__mail").addClass("copied");
 			setTimeout(function() {
 				$(".contact__mail").removeClass("copied");
