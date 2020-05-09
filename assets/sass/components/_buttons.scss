@@ -4,7 +4,7 @@
     span {
         color: #212931;
     }
-    @include hoverable { //hoverable
+    @include hoverable { 
         span, .icon {
             transition: color 0.2s ease-in-out;
         }
@@ -14,7 +14,7 @@
             }
         }
     }
-    @include non-hoverable { //non-hoverable
+    @include non-hoverable { 
         &:active {
             background-color: rgb(#eeeeee, 0.6);
             border-radius: 3px;

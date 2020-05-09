@@ -1,5 +1,7 @@
 (function($) {
 
+	
+
 	var	$window = $(window),
 		$body = $("body"),
 		$background = $("#background"),
@@ -123,8 +125,10 @@
 			$("html, body").stop()});
 	});
 
+	new ClipboardJS('.test');
+
 	// Display the infobulle and copy my mail in the clipboard
-	$(".contact__mail").on("click touchstart", function() {
+	/*$(".contact__mail").on("click touchstart", function() {
 		if (!$(".contact__mail").hasClass("copied")) {
 			navigator.clipboard.writeText("jsandri@enseirb-matmeca.fr").then(function() {
 				$(".contact__mail").attr("aria-label", "Copied");
@@ -138,7 +142,7 @@
 				console.info("navigator.clipboard went wrong");
 			});
 		} 
-	});
+	});*/
 
 	// Disable Jarallax on portable devices
 	Breakpoints.get("portable").on("enter", function() {
