@@ -3,9 +3,8 @@
     position: fixed;
     background-size: cover;
     background-position: center;
-    -webkit-backface-visibility: hidden;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     z-index: -1;
     transition: background-color 3s ease-in;
     transition-delay: 1s;

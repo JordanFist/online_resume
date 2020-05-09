@@ -4,18 +4,23 @@
     @include tablet-landscape {
         position: fixed;
         top: 0.8rem;
-        right: 1rem;
+        right: 0.5rem;
         display: flex;
         align-items: center;
         z-index: 102;
         font-size: 0.9rem;
         font-weight: bold;
         font-family: "Source Sans Pro";
+        padding: 0.125rem 1rem 0.125rem 1rem;
         filter: drop-shadow(0px 0px 8px rgb(0, 0, 0, 0.25));
+        transition: background-color 0.2s ease-in-out, box-shadow 0.4s ease-in-out;
         &.alt {
+            span,.icon {
+                color: #212931;
+            }
+            filter: none;
             background-color: rgb(255, 255, 255, 0.8);
-            padding: 2px 17px 2px 17px;
-            box-shadow: 0 0.125rem 0.75rem 0 rgba(30, 37, 45, 0.25);
+            box-shadow: 0 0.125rem 0.75rem rgba(#212931, 0.15);
         }
     }
 }

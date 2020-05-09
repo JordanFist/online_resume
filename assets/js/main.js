@@ -4,6 +4,7 @@
 
 	var	$window = $(window),
 		$body = $("body"),
+		$header = $("header")
 		$background = $("#background"),
 		$wrapper = $("#wrapper"),
 		$nav = $("nav"),
@@ -166,13 +167,15 @@
 		}
 	});
 
-	//test 
-	/*$(".contact a").on("click touchstart", function() {
-		$(this).addClass("tapped");
-		var $test=$(this);
-		setTimeout(function() {
-			$test.removeClass("tapped");
-		}, 1000);
-	});*/
+	// Modify the nav-toggle menu on white background
+	$header.scrollex({
+		bottom: "5vh",
+		enter: 		function() {
+			$nav_toggle.removeClass("alt");
+		},
+		leave:		function() {
+			$nav_toggle.addClass("alt");
+		}
+	});
 
 })(jQuery);
