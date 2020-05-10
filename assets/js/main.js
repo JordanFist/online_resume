@@ -182,7 +182,7 @@
 
 	// Fix background image jump on mobile
 	if ((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-		$background.css({'top': 'auto', 'bottom': 0});
+		$background.css({'top': 0, 'bottom': 0});
 
 		$window.resize(sizeBackground);
 		sizeBackground();
