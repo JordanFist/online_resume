@@ -7,28 +7,6 @@ html, body {
     width: 100%;
 }
 
-body {
-    background-color: rgba(0,0,0,0);
-    background-image: none;
-}
-
-
-html:before {
-    content: ' ';
-    display: block;
-    background-image: url("../../images/background2.jpeg");
-    background-position: bottom left; 
-    /*For my instance this is how I have built my bg image. Indexes off the 
-bottom left for consistency*/
-    background-size: cover;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    z-index: -10; 
-}
-
 *, *:before, *:after {
     box-sizing: inherit;
 }
