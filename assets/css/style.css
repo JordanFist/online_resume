@@ -78,6 +78,13 @@ html, body {
   width: 100%;
 }
 
+body {
+  background-image: url("../../images/background2.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
