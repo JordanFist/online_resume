@@ -7,7 +7,7 @@ html, body {
     width: 100%;
 }
 
-body {
+body:after {
     background-image: url("../../images/background2.jpeg") center center;
     content:"";
     position:fixed; /* stretch a fixed position to the whole screen */
