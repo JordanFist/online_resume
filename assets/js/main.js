@@ -178,9 +178,7 @@
 	});
 
 	// Background
-		// We execute the same script as before
-		let vh = window.outerHeight * 0.01;
-		document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 	  
 
 })(jQuery);
