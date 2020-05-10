@@ -81,6 +81,16 @@
 		closing();
 	});
 
+	$body.on("click", "#overlay", function () {
+		closing();
+   });
+
+   Breakpoints.get("portable").on("leave", function() {
+		if ($nav.hasClass("expanded")) {
+			closing();
+		}
+   });
+
 	// Display the section in the navigation while scrolling
 	var $nav_a = $("nav ul").find("a");
 
@@ -178,7 +188,7 @@
 	});
 
 	// Background
-      var $background = $('.bg');
+    /*var $background = $('.bg');
 
 	// Fix background image jump on mobile
 	if ((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
@@ -190,6 +200,6 @@
 
 	function sizeBackground() {
 		$background.height(screen.height);
-	}
+	}*/
 	  
 })(jQuery);
