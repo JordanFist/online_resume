@@ -67,7 +67,7 @@
 	});
 
 	// Manage the closing of the navbar on mobile
-	$nav_toggle_closing.click(function() {
+	function closing() {
 		$("#overlay").fadeOut(400, function() {
 			$(this).remove();
 		});
@@ -75,7 +75,10 @@
 		$nav.addClass("hidden");
 		setTimeout(function() {
 			$nav.removeClass("hidden");
-		}, 300);
+		}, 400);
+	}
+	$nav_toggle_closing.click(function() {
+		closing();
 	});
 
 	// Display the section in the navigation while scrolling
@@ -111,6 +114,9 @@
 			$section = $(id);
 			
 			event.preventDefault();
+			if ($nav.hasClass("expanded")) {
+				//closing();
+			}
 			$("html, body").stop().animate({
 				scrollTop: $section.offset().top
 			}, 2000, "easeInOutExpo");
