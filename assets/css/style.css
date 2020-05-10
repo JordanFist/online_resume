@@ -83,20 +83,20 @@ body {
   background-image: none;
 }
 
-body:before {
-  content: "";
+html:before {
+  content: " ";
   display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-  background: url("../../images/background2.jpeg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-image: url("../../images/background2.jpeg");
+  background-position: bottom left;
+  /*For my instance this is how I have built my bg image. Indexes off the 
+  bottom left for consistency*/
   background-size: cover;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: -10;
 }
 
 *, *:before, *:after {
