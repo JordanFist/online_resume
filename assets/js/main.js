@@ -188,11 +188,11 @@
 	});
 
 	// Background
-    /*var $background = $('.bg');
+    var $background = $('.bg');
 
 	// Fix background image jump on mobile
 	if ((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-		$background.css({'top': 0, 'bottom': 0});
+		$background.css({'top': auto, 'bottom': 0});
 
 		$window.resize(sizeBackground);
 		sizeBackground();
@@ -200,15 +200,6 @@
 
 	function sizeBackground() {
 		$background.height(screen.height);
-	}*/
-
-	var bg = $(".bg");
-
-	function resizeBackground() {
-		bg.height($(window).height() + 60);
 	}
-
-	$(window).resize(resizeBackground);
-	resizeBackground();
 	  
 })(jQuery);
