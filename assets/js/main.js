@@ -87,7 +87,7 @@
 
    Breakpoints.get("portable").on("leave", function() {
 		if ($nav.hasClass("expanded")) {
-			closing();
+			closing()
 		}
    });
 
@@ -201,5 +201,14 @@
 	function sizeBackground() {
 		$background.height(screen.height);
 	}*/
+
+	var bg = $(".bg");
+
+	function resizeBackground() {
+		bg.height($(window).height());
+	}
+
+	$(window).resize(resizeBackground);
+	resizeBackground();
 	  
 })(jQuery);

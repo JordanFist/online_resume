@@ -432,12 +432,11 @@ ul {
 }
 
 .bg {
-  background: url("../../images/background2.jpeg") 0 0 no-repeat fixed;
+  background: url("../../images/background2.jpeg");
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   background-size: cover;
   z-index: -1000;
 }
