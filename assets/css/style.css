@@ -431,16 +431,13 @@ ul {
   background-image: url("../../images/background2.jpeg");
 }
 
-.bg {
+body {
   background: url("../../images/background2.jpeg");
-  position: fixed;
-  top: 0;
-  left: 0;
+  background-attachment: fixed;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  z-index: -1000;
 }
 
 #wrapper .language {
