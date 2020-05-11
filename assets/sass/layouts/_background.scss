@@ -19,23 +19,9 @@
     background-image: url("../../images/background2.jpeg");
 }
 
-html {
-    background: url("../../images/background2.jpeg"); 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-/*.bg {
-    background: url("../../images/background2.jpeg");
-    position:fixed;
-    width:100%;
-    height: 100vh;
+.bg {
+    background: url("../../images/background2.jpeg") fixed;
     background-size: cover;
     background-position: center;
     //z-index: -1000;
-}*/
+}
