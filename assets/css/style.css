@@ -432,7 +432,10 @@ ul {
 }
 
 .bg {
-  background: url("../../images/background2.jpeg") fixed;
+  background: url("../../images/background2.jpeg");
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
   background-size: cover;
   background-position: center;
 }
