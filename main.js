@@ -7,6 +7,9 @@
     
         (function($) {
             calcFullHeight();
+
+            alert(window.outerHeight);
+            alert($(window).height());
     
             jQuery(window).on('orientationchange', function() {
                 // 500ms timeout for getting the correct height after orientation change
