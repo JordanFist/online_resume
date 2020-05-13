@@ -1,7 +1,8 @@
 (function($) {
     //Loading height on touch-device
         function calcFullHeight() {
-            jQuery('#bg').css("height", $(window).height());
+            jQuery('#bg').css("height", window.outerHeight);
+            //jQuery('#bg').css("height", $(window).height());
         }
     
         (function($) {
