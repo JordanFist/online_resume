@@ -3,6 +3,11 @@ html, body {
     padding: 0;
 }
 
+html {
+    background: url("bg.jpeg") no-repeat center center fixed;
+    background-size: cover;
+}
+
 #section{
     height: 300vh;
     color: white;
@@ -22,11 +27,11 @@ html, body {
     top: 10vh;
 }
 
-#bg {
+/*#bg {
     position: fixed;
     background: url("bg.jpeg");
     background-position: center;
     background-size: cover;
     min-height: -webkit-fill-available;
     width: 100vw;
-}
+}*/
