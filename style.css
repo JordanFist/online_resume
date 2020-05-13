@@ -1,32 +1,27 @@
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-#section{
-    height: 300vh;
-    color: white;
-}
-
-.wrapper {
-    position: absolute;
-    border: 2px solid white;
-    background-color: black;
-    width: 40vw;
-    height:min-content;
-    display: inline-block;
-    left: 25%;
-    padding: 5vh 5vh 0vw 5vw;
-    text-align: left;
-    font-size: 4vh;
-    top: 10vh;
-}
-
-#bg {
-    position: fixed;
-    background: url("bg.jpeg");
-    background-position: center;
-    background-size: cover;
+body {
+    background-color: #333;
+  }
+  
+  .module {
+    height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
     height: calc(var(--vh, 1vh) * 100);
-    width: 100vw;
-}
+    margin: 0 auto;
+    max-width: 30%;
+  }
+  
+  .module__item {
+    align-items: center;
+    display: flex;
+    height: 20%;
+    justify-content: center;
+  }
+  
+  .module__item:nth-child(odd) {
+    background-color: #fff;
+    color: #F73859;
+  }
+  
+  .module__item:nth-child(even) {
+    background-color: #F73859;
+    color: #F1D08A;
+  }
