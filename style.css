@@ -3,7 +3,7 @@ html, body {
     padding: 0;
 }
 
-body:after {
+/*body:after {
 	content:"";
 	position:fixed;
 	left:0;
@@ -14,6 +14,11 @@ body:after {
 	display:block;
 	background:url("bg.jpeg") no-repeat 50% 50%;
 	background-size:cover;
+}*/
+
+html {
+    background: url("bg.jpeg") no-repeat center center fixed;
+    background-size: cover;
 }
 
 #section{
