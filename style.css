@@ -17,30 +17,10 @@ html, body {
 }*/
 
 html {
-    height:100% !important;
+    background:url("bg.jpeg") no-repeat center center fixed;
+    background-size: 100vw;
 }
 
-body {
-    height:100%;
-    overflow-x:hidden;
-    overflow-y:auto;
-    min-height:100vh;
-    position:relative;
-}
-body:before {
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    display:block;
-    content:"";
-    z-index:-1;
-    background-image:url("bg.jpeg");
-    background-position:center;
-    background-size:cover;
-    -webkit-background-size:cover;
-}
 
 #section{
     height: 300vh;
