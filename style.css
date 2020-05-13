@@ -27,6 +27,6 @@ html, body {
     background: url("bg.jpeg");
     background-position: center;
     background-size: cover;
-    height: calc(var(--vh, 1vh) * 100);
+    min-height: -webkit-fill-available;
     width: 100vw;
 }
