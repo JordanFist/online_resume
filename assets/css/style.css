@@ -335,6 +335,12 @@ footer p {
     color: burlywood;
   }
 }
+.button-copiable {
+  display: inline-block;
+}
+.button-copiable.copied {
+  animation: 1s bounceIn;
+}
 .button.resume {
   padding: 0;
   display: inline-block;

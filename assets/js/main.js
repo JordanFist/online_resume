@@ -148,6 +148,19 @@
 		}
 	});
 
+	new ClipboardJS(".button-copiable");
+
+	$(".button-copiable").on("click", function() {
+		if (!$(".button-copiable").hasClass("copied")) {
+			$(".button-copiable").attr("aria-label", "Copied!");
+			$(".button-copiable").addClass("copied");
+			setTimeout(function() {
+				$(".button-copiable").removeClass("copied");
+				$(".button-copiable").attr("aria-label", "Copy mail");
+			}, 2000);
+		}
+	});
+
 	// Disable Jarallax on portable devices
 	Breakpoints.get("portable").on("enter", function() {
 		jarallax($(".jarallax"), 'destroy');

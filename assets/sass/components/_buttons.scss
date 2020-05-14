@@ -86,6 +86,13 @@
             }
         }
     }
+
+    &-copiable {
+        display: inline-block;
+        &.copied {
+            animation: 1s bounceIn;
+        }
+    }
     
     &.resume {
         padding: 0;
