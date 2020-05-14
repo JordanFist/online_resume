@@ -738,9 +738,6 @@ footer .contact {
 footer .contact :nth-child(2) {
   margin: auto 1.5rem;
 }
-footer .contact .contact__mail.copied {
-  animation: 1s bounceIn;
-}
 footer .copyright {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 0.06rem 0rem;

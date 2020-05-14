@@ -19,11 +19,6 @@ footer {
         :nth-child(2) {
             margin: auto 1.5rem;
         }
-        .contact__mail {
-            &.copied {
-                animation: 1s bounceIn;
-            }
-        }
     }
     .copyright {
         background-color: map-get($palette, footer-background);
