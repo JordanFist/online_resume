@@ -455,7 +455,6 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   transform: scale(1.125);
-  transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
 }
 
 #wrapper .language {
