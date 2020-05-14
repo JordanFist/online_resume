@@ -1,7 +1,5 @@
 (function($) {
 
-	
-
 	var	$window = $(window),
 		$body = $("body"),
 		$header = $("header")
@@ -151,10 +149,10 @@
 	});
 
 	// Disable Jarallax on portable devices
-	/*Breakpoints.get("portable").on("enter", function() {
-		jarallax($background, 'destroy');
+	Breakpoints.get("portable").on("enter", function() {
+		jarallax($(".jarallax"), 'destroy');
 		$wrapper.unwrap();
-		$body.prepend("<div id='background'></div>");
+		$body.append("<div id='background'></div>");
 	});
 	Breakpoints.get("desktop").on("enter", function() {
 		if (document.getElementById("background")) {
@@ -164,7 +162,7 @@
 		$(".jarallax").jarallax({
 			speed: 0.05
 		});
-	});*/
+	});
 
 	// Fix balloon size for mobile devices
 	Breakpoints.get("mobile").on({
@@ -186,20 +184,5 @@
 			$nav_toggle_opening.addClass("alt");
 		}
 	});
-
-	// Background
-    /*var $background = $('.bg');
-
-	// Fix background image jump on mobile
-	if ((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-		$background.css({'top': auto, 'bottom': 0});
-
-		$window.resize(sizeBackground);
-		sizeBackground();
-	}
-
-	function sizeBackground() {
-		$background.height(screen.height);
-	}*/
 	  
 })(jQuery);
