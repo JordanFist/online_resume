@@ -42,10 +42,25 @@ html, body {
     height: 100%;
 }
 
+#bg:before {
+    transition: background-color 2.5s ease-in-out;
+    transition-delay: 0.75s;
+    background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
+    background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
+			z-index: 1;
+}
+
 #bg:after {
     background-image:		url('bg.jpeg');
     background-position:	center;
     background-size:		cover;
     background-repeat:		no-repeat;
     transform: scale(1.125);
+    transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
+
 }
