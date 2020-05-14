@@ -1,0 +1,50 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#section{
+    height: 300vh;
+    color: white;
+}
+
+.wrapper {
+    position: absolute;
+    border: 2px solid white;
+    background-color: black;
+    width: 40vw;
+    height:min-content;
+    display: inline-block;
+    left: 25%;
+    padding: 5vh 5vh 0vw 5vw;
+    text-align: left;
+    font-size: 4vh;
+    top: 10vh;
+}
+
+#bg {
+    -webkit-backface-visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+#bg:before, #bg:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#bg:after {
+    background-image:		url('bg.jpeg');
+    background-position:	center;
+    background-size:		cover;
+    background-repeat:		no-repeat;
+}
