@@ -57,7 +57,7 @@
       opacity: 0;
       transform: scale3d(0.3, 0.3, 0.3);
       /*Fix the vanishing balloon bug*/
-      padding-right: 0.1px;
+      
       color: burlywood;
     }
   
