@@ -58,7 +58,7 @@
       transform: scale3d(0.3, 0.3, 0.3);
       /*Fix the vanishing balloon bug*/
       padding-right: 0.1px;
-      /*color: burlywood;*/
+      color: burlywood;
     }
   
     20% {
@@ -80,6 +80,7 @@
   
     to {
       opacity: 1;
+      color: burlywood;
       transform: scale3d(1, 1, 1);
     }
   }
