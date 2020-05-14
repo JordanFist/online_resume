@@ -440,7 +440,7 @@ ul {
   z-index: -1;
   transform: scale(1);
 }
-#background:after, #background:before {
+#background:after {
   content: "";
   display: block;
   position: absolute;

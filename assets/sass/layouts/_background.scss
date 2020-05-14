@@ -27,7 +27,7 @@
     height: 100vh;
     z-index: -1;
     transform: scale(1.0);
-    &:after, &:before {
+    &:after {
         content: "";
         display: block;
         position: absolute;
