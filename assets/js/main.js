@@ -155,7 +155,9 @@
 
 	// Disable Skrollr on portable devices.
 	Breakpoints.get("portable").on("enter", function() {
-		skrollr.get().destroy();
+		if (skrollr.get()) {
+			skrollr.get().destroy();
+		}
 		$body.removeClass("parallax");
 		$body.append("<div id='background'></div>");
 	});

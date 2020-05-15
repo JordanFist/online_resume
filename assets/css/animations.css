@@ -114,18 +114,18 @@
 
   @keyframes slideInRight {
     from { 
-        transform: translateX(100%);
+        right: -263px;
     }
     to   { 
-        transform: translateX(0%);
+        right: 0px;
     }
 }
 
 @keyframes slideOutRight {
     from { 
-        transform: translateX(0%);
+      right: 0px;
     }
     to   { 
-        transform: translateX(100%);
+      right: -263px;
     }
 }
