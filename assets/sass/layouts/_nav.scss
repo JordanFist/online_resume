@@ -4,7 +4,7 @@ nav {
     text-align: right;
     position: fixed;
     right: 1.5%;
-    top: calc(50% - 133px); // Can't apply translateY due to a jarallax bug
+    top: calc(50% - 133px); // Can't apply translateY due to a jumpy navbar bug
     z-index: 1;
     hr {
         display: none;

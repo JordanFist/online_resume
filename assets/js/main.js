@@ -3,8 +3,7 @@
 	// Useful variables.
 		var	$window = $(window),
 			$body = $("body"),
-			$header = $("header")
-			$background = $("#background"),
+			$header = $("header"),
 			$wrapper = $("#wrapper"),
 			$nav = $("nav"),
 			$nav_a = $("nav ul a"),
@@ -154,26 +153,27 @@
 			}
 		});
 
-	// Disable Jarallax on portable devices.
+	// Disable Skrollr on portable devices.
 	Breakpoints.get("portable").on("enter", function() {
-		jarallax($(".jarallax"), 'destroy');
-		$wrapper.unwrap();
+		skrollr.get().destroy();
+		$body.removeClass("parallax");
 		$body.append("<div id='background'></div>");
-
 	});
 
-	// Enable Jarallax on desktop.
+	// Enable Skrollr on desktop.
 		Breakpoints.get("desktop").on("enter", function() {
 			if (document.getElementById("background")) {
-				$background.remove();
-				$wrapper.wrap("<div class='jarallax'></div>")
+				$("#background").remove();
 			}
 
-			$(".jarallax").jarallax({
-				speed: 0.05
+			$body.addClass("parallax");
+			skrollr.init({
+				forceHeight: false
 			});
 
 		});
+		
+	
 
 	/* Fix Section */ 
 

@@ -78,6 +78,11 @@ html, body {
   width: 100%;
 }
 
+body.parallax {
+  background: url("../../images/background2.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -439,10 +444,6 @@ ul {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.jarallax {
-  background-image: url("../../images/background2.jpeg");
 }
 
 #wrapper .language {
