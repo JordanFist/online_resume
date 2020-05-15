@@ -468,7 +468,7 @@ ul {
   right: 0;
   z-index: 10;
 }
-#wrapper:after {
+#wrapper #overlay:after {
   content: "";
   display: block;
   position: absolute;
