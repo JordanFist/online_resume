@@ -516,7 +516,7 @@ nav a.link__active svg {
   nav {
     top: 0;
     right: -263px;
-    height: 100vh;
+    bottom: 0;
     text-align: left;
     background-color: white;
     padding: 0.8rem 6rem 3rem 2rem;

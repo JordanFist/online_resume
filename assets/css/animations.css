@@ -56,7 +56,7 @@
     from {
       opacity: 0;
       transform: scale3d(0.3, 0.3, 0.3);
-      /*Fix the vanishing balloon bug*/
+      /* Fix the vanishing balloon bug */
       padding-right: 0.1px;
     }
   
@@ -114,7 +114,7 @@
 
   @keyframes slideInRight {
     from { 
-        right: -263px;
+        right: -263px; /* Fix the shaking navbar */
     }
     to   { 
         right: 0px;
