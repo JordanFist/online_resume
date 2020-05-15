@@ -51,7 +51,7 @@ nav {
         padding: 0.8rem 6rem 3rem 2rem;
         overflow: scroll;
         z-index: 11;
-        transform: scale(1.0);
+        transform: scale(1.0); // Fix the jumpy navbar when scrolling with the navbar opened
         &.expanded {
             animation: slideInRight 0.4s ease-in-out forwards;
             box-shadow: 0 0 1.5rem 0 rgba(0,0,0,0.2);

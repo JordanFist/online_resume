@@ -95,7 +95,7 @@
 			
 			event.preventDefault();
 			if ($nav.hasClass("expanded")) {
-				//closing();
+				closing();
 			}
 			
 			$("html, body").stop().animate({
