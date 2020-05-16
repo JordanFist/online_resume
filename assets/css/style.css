@@ -347,40 +347,31 @@ footer p {
   animation: 1s bounceIn;
 }
 .button.resume {
-  padding: 0;
   display: inline-block;
-  font-weight: 600;
+  font-weight: 900;
   font-size: 1.2rem;
-  margin-bottom: 11rem;
-  border-radius: 3px;
-  padding: 5px 35px 5px 35px;
-  letter-spacing: 0.08rem;
-  line-height: 2.8rem;
-  background-color: #dbbb91;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-  color: white;
-  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0.05) 80%);
+  margin-bottom: 14rem;
+  padding: 20px 30px 20px 30px;
+  letter-spacing: 0.03rem;
+  line-height: 1rem;
+  border-radius: 30px;
+  border: 2px solid white;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
-.button.resume:hover {
-  color: whitesmoke;
-  background-color: rgba(245, 245, 245, 0.1);
+.button.resume span {
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+@media (any-hover: hover) {
+  .button.resume:hover {
+    background-color: rgba(245, 245, 245, 0.1);
+    border-color: burlywood;
+  }
+  .button.resume:hover span {
+    color: burlywood;
+  }
 }
 
-@keyframes tapped {
-  0% {
-    color: white;
-  }
-  20% {
-    color: burlywood;
-  }
-  80% {
-    color: burlywood;
-  }
-  100% {
-    color: white;
-  }
-}
 ul {
   list-style: none;
 }

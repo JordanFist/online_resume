@@ -10,6 +10,11 @@
 			$nav_toggle_closing = $("#nav-toggle-closing"),
 			$nav_toggle_opening = $("#nav-toggle-opening");
 
+	// Initialize is-active in nav_a
+		for (let i = 0; i < $nav_a.length; i++) {
+			$nav_a[i].is_active = 0;
+		}
+
 	// Breakpoints.
 		Breakpoints({
 			mobile: {
@@ -34,6 +39,30 @@
 			}
 		});
 
+	/* Useful functions */
+
+	// Increase the value of is_active.
+		function increase(a) {
+			a.is_active += 1;
+		}
+
+	// Decrease the value of is_active.
+		function decrease(a) {
+		if (a.is_active > 0) {
+			a.is_active -= 1;
+		}
+	}
+
+	// Return true if a is active.
+		function is_active (a) {
+			if (a.is_active == 0) {
+				return false;
+			}
+			return true;
+		}
+
+	/* Main functions */
+
 	// Play initial animations on page load.
 		$window.on("load", function() {
 			window.setTimeout(function() {
@@ -48,14 +77,21 @@
 
 	// Display the section in the navigation while hovering.
 		$nav_a.hover(function() {
+			increase($(this)[0]);
 			$(this).addClass("link__active");
+
 		}, function() {
-			$(this).removeClass("link__active");
-			$(this).addClass("link__disabled");
-			var $nav_a = $(this);
-			window.setTimeout(function(nav_a) {
-				$nav_a.removeClass("link__disabled");
-			}, 200);
+			decrease($(this)[0]);
+			if (!is_active($(this)[0])) {
+				$(this).removeClass("link__active");
+				$(this).addClass("link__disabled");
+				
+				var $a = $(this);
+				window.setTimeout(function() {
+					$a.removeClass("link__disabled");
+				}, 200);
+
+			}
 		});
 
 	// Display the section in the navigation while scrolling.
@@ -69,11 +105,14 @@
 			mode: "middle",
 
 			enter: 		function() {
+				increase($this[0]);
 				$this.addClass("link__active");
 			},
 
 			leave:		function() {
-				if ($this.hasClass("link__active")) {
+				decrease($this[0]);
+
+				if ($this.hasClass("link__active") && !is_active($this[0])) {
 					$this.removeClass("link__active");
 					$this.addClass("link__disabled");
 
@@ -119,11 +158,14 @@
 			$("#overlay").fadeOut(400, function() {
 				$(this).remove();
 			});
+			
 			$nav.removeClass("expanded");
 			$nav.addClass("hidden");
+
 			window.setTimeout(function() {
 				$nav.removeClass("hidden");
 			}, 400);
+
 		}
 
 	// Close the navbar if click on the cross.
