@@ -1,26 +1,33 @@
 header {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    height: 116vh;
-    min-height: 35rem;
-    /*max-width: 100%;*/
-    text-align: center;
-    background-position-y: -16rem;
+    height: calc(100vh + 110px); // 110px half size of the profile picture
+    min-height: 45rem;
     background-image: radial-gradient(rgba(0, 0, 0, 0.20) 20%, rgba(0, 0, 0, 0) 45%);
     background-repeat: no-repeat;
+    background-position-y: -16rem;
+
     transition: opacity 1s ease-in-out;
     transition-delay: 1s; 
-    
+
+    .language {
+        display: flex;
+        align-self: flex-end;
+        padding: 0.5rem 1rem;
+        @include tablet-landscape {
+            display: none;
+        }
+    }
     .content {
-        border-top: 3px solid white;
-        border-bottom: 3px solid white;
-        border-color: map-get($palette, accent);
+        border-top: 3px solid map-get($palette, accent);
+        border-bottom: 3px solid map-get($palette, accent);
         max-width: 100%;
         position: relative;
-        margin-top: 0rem;
         transition: border-color 2s ease-in;
+
+        
+        margin-top: 4rem;
         /*body.is-preload &{
             border-color: white;
         }*/
@@ -29,11 +36,12 @@ header {
             display: flex;
             flex-direction: column;
             align-items: center;
-            transition: max-height 0.75s ease, padding 0.75s ease;
-            transition-delay: 0.25s;
+            text-align: center;
             padding: 3rem 2rem;
             max-height: 40rem;
             overflow: hidden;
+            transition: max-height 0.75s ease, padding 0.75s ease;
+            transition-delay: 0.25s;
             /*body.is-preload & {
                 max-height: 0;
                 padding-top: 0;

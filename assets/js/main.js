@@ -221,7 +221,7 @@
 
 	/* Fix Section */ 
 
-	// Prevent the overlay staying open if resize.
+	// Prevent the overlay from staying open if resize.
 	Breakpoints.get("portable").on("leave", function() {
 		if ($nav.hasClass("expanded")) {
 			closing();
@@ -241,9 +241,9 @@
 
 		});
 
-	// Modify the navbar to be visible on white background.
+	// Modify the navbar to be visible on white background on mobile.
 		$header.scrollex({
-			bottom: "5vh",
+			bottom: "50px",
 
 			enter: 		function() {
 				$nav_toggle_opening.removeClass("alt");

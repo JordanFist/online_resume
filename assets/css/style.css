@@ -216,7 +216,6 @@ footer p {
 .image.tiny {
   width: 25px;
   height: 15px;
-  vertical-align: middle;
   border-radius: 2px;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
 }
@@ -313,12 +312,18 @@ footer p {
     border-color: burlywood;
   }
 }
+.button.flag {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
 @media (any-hover: hover) {
   .button.flag:active {
     background-color: rgba(204, 204, 204, 0.5);
   }
 }
 .button.flag span {
+  font-family: "Merriweather";
   font-size: 0.75rem;
   margin-left: 0.3rem;
 }
@@ -350,13 +355,13 @@ footer p {
   display: inline-block;
   font-weight: 900;
   font-size: 1.2rem;
-  margin-bottom: 14rem;
   padding: 20px 30px 20px 30px;
   letter-spacing: 0.03rem;
   line-height: 1rem;
   border-radius: 30px;
   border: 2px solid white;
   transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  margin-top: 10rem;
 }
 .button.resume span {
   color: white;
@@ -369,6 +374,13 @@ footer p {
   }
   .button.resume:hover span {
     color: burlywood;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .button.resume {
+    margin-top: 6rem;
+    padding: 15px 20px 15px 20px;
+    font-size: 1rem;
   }
 }
 
@@ -418,10 +430,10 @@ ul {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: -1;
+  z-index: -10;
   transform: scale(1);
 }
-#background:after {
+#background:after, #background:before {
   content: "";
   display: block;
   position: absolute;
@@ -430,27 +442,18 @@ ul {
   width: 100%;
   height: 100%;
 }
+#background:before {
+  z-index: -9;
+  background-image: linear-gradient(to top, rgba(19, 21, 25, 0.1), rgba(19, 21, 25, 0.1));
+}
 #background:after {
+  z-index: -10;
   background-image: url("../../images/background2.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#wrapper .language {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.5rem 1rem;
-}
-#wrapper .language a {
-  margin-left: 1rem;
-}
-@media screen and (max-width: 1200px) {
-  #wrapper .language {
-    display: none;
-  }
-}
 #wrapper #overlay {
   position: fixed;
   top: 0;
@@ -468,7 +471,7 @@ nav {
   text-align: right;
   position: fixed;
   right: 1.5%;
-  top: calc(50% - 133px);
+  top: calc(50% - 114px);
   z-index: 1;
   /*body.is-preload & {
       opacity: 0;
@@ -596,15 +599,12 @@ nav a.link__active svg {
 header {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  height: 116vh;
-  min-height: 35rem;
-  /*max-width: 100%;*/
-  text-align: center;
-  background-position-y: -16rem;
+  height: calc(100vh + 110px);
+  min-height: 45rem;
   background-image: radial-gradient(rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0) 45%);
   background-repeat: no-repeat;
+  background-position-y: -16rem;
   transition: opacity 1s ease-in-out;
   transition-delay: 1s;
   /*body.is-preload & {
@@ -614,14 +614,23 @@ header {
       opacity: 0;
   }*/
 }
+header .language {
+  display: flex;
+  align-self: flex-end;
+  padding: 0.5rem 1rem;
+}
+@media screen and (max-width: 1200px) {
+  header .language {
+    display: none;
+  }
+}
 header .content {
-  border-top: 3px solid white;
-  border-bottom: 3px solid white;
-  border-color: #deb887;
+  border-top: 3px solid #deb887;
+  border-bottom: 3px solid #deb887;
   max-width: 100%;
   position: relative;
-  margin-top: 0rem;
   transition: border-color 2s ease-in;
+  margin-top: 4rem;
   /*body.is-preload &{
       border-color: white;
   }*/
@@ -630,11 +639,12 @@ header .content .inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: max-height 0.75s ease, padding 0.75s ease;
-  transition-delay: 0.25s;
+  text-align: center;
   padding: 3rem 2rem;
   max-height: 40rem;
   overflow: hidden;
+  transition: max-height 0.75s ease, padding 0.75s ease;
+  transition-delay: 0.25s;
   /*body.is-preload & {
       max-height: 0;
       padding-top: 0;
@@ -801,15 +811,23 @@ footer .copyright {
   text-align: center;
 }
 
-.experience .tile {
-  position: relative;
-}
 .experience__writing {
   position: relative;
   padding-left: 3rem;
 }
+@media screen and (max-width: 992px) {
+  .experience__writing {
+    padding: 0;
+    text-align: center;
+  }
+}
 .experience__writing h3 {
   margin-bottom: 1rem;
+}
+@media screen and (max-width: 992px) {
+  .experience__writing h3 {
+    margin-top: 2rem;
+  }
 }
 
 .vertical_divider {

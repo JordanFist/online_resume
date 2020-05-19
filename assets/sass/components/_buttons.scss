@@ -51,12 +51,16 @@
     }
 
     &.flag { 
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
         @include hoverable { 
             &:active {
                 background-color: rgb(#cccccc, 0.5);
             }
         }
         span {
+            font-family: "Merriweather";
             font-size: 0.75rem;
             margin-left: 0.3rem;
         }
@@ -98,7 +102,6 @@
         display: inline-block;
         font-weight: 900;
         font-size: 1.2rem;
-        margin-bottom: 14rem;
         padding: 20px 30px 20px 30px;
         letter-spacing: 0.03rem;
         line-height: 1rem;
@@ -109,8 +112,9 @@
         border: 2px solid white;
         //box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.5);
         transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-        
         //background-image: radial-gradient(rgba(0, 0, 0, 0.10) 60%, rgba(0, 0, 0, 0.05) 80%);
+                
+        margin-top: 10rem;
         span {
             color: white;
             transition: color 0.2s ease-in-out;
@@ -123,6 +127,11 @@
                     color: burlywood;
                 }
             }
+        }
+        @include tablet-landscape {
+            margin-top: 6rem;
+            padding: 15px 20px 15px 20px;
+            font-size: 1rem;
         }
     }
 }

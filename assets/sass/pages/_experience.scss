@@ -1,12 +1,16 @@
 .experience {
-    .tile {
-        position: relative;
-    }
     &__writing {
         position: relative;
         padding-left: 3rem;
+        @include tablet {
+            padding: 0;
+            text-align: center;
+        }
         h3 {
             margin-bottom: 1rem;
+            @include tablet {
+                margin-top: 2rem;
+            }
         }
     }
 }

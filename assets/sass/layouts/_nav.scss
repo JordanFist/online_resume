@@ -4,7 +4,7 @@ nav {
     text-align: right;
     position: fixed;
     right: 1.5%;
-    top: calc(50% - 133px); // Can't apply translateY due to a jumpy navbar bug (133px = half height of the navbar)
+    top: calc(50% - 114px); // Can't apply translateY due to a jumpy navbar bug (133px = half height of the navbar)
     z-index: 1;
     hr {
         display: none;
