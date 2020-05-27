@@ -79,7 +79,8 @@ html, body {
 }
 
 body.parallax {
-  background: url("../../images/background2.jpeg") no-repeat center center fixed;
+  background: url("../../images/background2.jpeg") no-repeat fixed;
+  background-position-x: center;
   background-size: cover;
 }
 
@@ -120,34 +121,33 @@ header {
   color: #f5f5f5;
 }
 
-h1, h2 {
-  font-weight: 900;
-  line-height: 1.5;
-  letter-spacing: 0.075em;
+h1, h2, h3, h4 {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
 }
 
 h1 {
+  font-weight: 900;
   font-size: 2.8rem;
   line-height: 1.1;
-  margin: 0 0 0;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.075em;
   text-transform: uppercase;
 }
 
 h2 {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 900;
   font-size: 1.75rem;
   line-height: 1.3;
+  letter-spacing: 0.075em;
 }
 
 h3 {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.3;
 }
 
 h4 {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.3;
@@ -317,7 +317,7 @@ footer p {
   align-items: center;
   margin-left: 1rem;
 }
-@media (any-hover: hover) {
+@media (any-hover: none) {
   .button.flag:active {
     background-color: rgba(204, 204, 204, 0.5);
   }
@@ -354,14 +354,14 @@ footer p {
 .button.resume {
   display: inline-block;
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 20px 30px 20px 30px;
   letter-spacing: 0.03rem;
   line-height: 1rem;
   border-radius: 30px;
   border: 2px solid white;
   transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 .button.resume span {
   color: white;
@@ -414,12 +414,12 @@ ul {
   flex: 1;
 }
 
-.animation--resume {
+.animation.bounce-in-up {
   animation-delay: 4s;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-.animation--icon-tiny {
+.animation.bounce-in-wait {
   animation: bounceInWait 11s infinite;
 }
 
@@ -597,22 +597,31 @@ nav a.link__active svg {
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   height: calc(100vh + 110px);
   min-height: 45rem;
+  max-width: 100%;
   background-image: radial-gradient(rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0) 45%);
   background-repeat: no-repeat;
   background-position-y: -16rem;
-  transition: opacity 1s ease-in-out;
-  transition-delay: 1s;
+  transition: filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
   /*body.is-preload & {
       filter: blur(0.125rem);
   }*/
   /*body.is-preload & > * {
       opacity: 0;
   }*/
+}
+header .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 37vw;
+}
+@media screen and (max-width: 1200px) {
+  header .wrapper {
+    height: 53vh;
+  }
 }
 header .language {
   display: flex;
@@ -624,32 +633,41 @@ header .language {
     display: none;
   }
 }
+header .main-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 1200px) {
+  header .main-title {
+    height: 11.4rem;
+    margin-top: 3rem;
+  }
+}
 header .content {
-  border-top: 3px solid #deb887;
-  border-bottom: 3px solid #deb887;
+  border-top: 2px solid #deb887;
+  border-bottom: 2px solid #deb887;
   max-width: 100%;
-  position: relative;
   transition: border-color 2s ease-in;
-  margin-top: 4rem;
-  /*body.is-preload &{
-      border-color: white;
-  }*/
+}
+body.is-preload header .content {
+  border-color: white;
 }
 header .content .inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
+  transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+  transition-delay: 0.25s;
   max-height: 40rem;
   overflow: hidden;
-  transition: max-height 0.75s ease, padding 0.75s ease;
-  transition-delay: 0.25s;
-  /*body.is-preload & {
-      max-height: 0;
-      padding-top: 0;
-      padding-bottom: 0;
-  }*/
+}
+body.is-preload header .content .inner {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #main {

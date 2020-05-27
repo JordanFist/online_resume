@@ -3,7 +3,7 @@
 	My online resume by Jordan Sandri | @Jordan Sandri
 -->
 <html lang="en">
-	<head>
+	<head> 
 		<title>Jordan Sandri</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="Jordan Sandri's online resume">
@@ -18,21 +18,20 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/animations.css" />
 		<link rel="stylesheet" type="text/css" href="assets/css/balloon.min.css">
 	</head>
-	<body class="is-preload">
-		
-		<!-- Background -->
-		<div id="background" class="jarallax" data-jarallax data-speed="0.05">
-			<img class="jarallax-img" src="images/background2.jpeg" alt="victoria falls background">
+	<body ontouchstart class="is-preload" data-start="background-position: 0% 0%;" data-end="background-position: 0% 100%;">
 
 			<!-- Wrapper -->
 			<div id="wrapper">
-				<div class="language">
-					<a class="button flag" href="index_en.html"><img class="image tiny" src="images/american_flag.jpg" alt="american flag" /><span>EN</span></a>
-					<a class="button flag active" href="index_fr.html"><img class="image tiny" src="images/french_flag.png" alt="french flag" /><span>FR</span></a>
-				</div>
 
 				<!-- Navigation Bar-->
+				<div id="nav-toggle-opening" class="nav-toggle opening button toggle">
+					<span>MENU</span>
+					<i class="icon opening fas fa-bars"></i>
+				</div>
 				<nav>
+					<div id="nav-toggle-closing" class="nav-toggle closing button">
+						<i class="icon closing fas fa-times"></i>
+					</div>
 					<ul>
 						<li>
 							<a href="#identity"> 
@@ -42,6 +41,7 @@
 								</svg>
 							</a>
 						</li>
+						<hr />
 						<li>
 							<a href="#education">
 								<span>Education</span>
@@ -50,6 +50,7 @@
 								</svg>
 							</a>
 						</li>
+						<hr />
 						<li>
 							<a href="#experience">
 								<span>Experience</span>
@@ -58,6 +59,7 @@
 								</svg>
 							</a>
 						</li>
+						<hr />
 						<li>
 							<a href="#projects">
 								<span>Projects</span>
@@ -66,6 +68,7 @@
 								</svg>
 							</a>
 						</li>
+						<hr />
 						<li>
 							<a href="#skills">
 								<span>Skills</span>
@@ -74,6 +77,7 @@
 								</svg>
 							</a>
 						</li>
+						<hr />
 						<li>
 							<a href="#hobbies">
 								<span>Hobbies</span>
@@ -82,19 +86,20 @@
 								</svg>
 							</a>
 						</li>
-						<li>
-							<a href="#contact">
-								<span>Contact</span>
-								<svg viewbox="0 0 25 25">
-									<circle cx="12" cy="12" r="10"></circle>
-								</svg>
-							</a>
-						</li>
 					</ul>
+					<div class="nav__contact">
+						<a class="button nav-network" href="mailto:jsandri@enseirb-matmeca.fr"><i class="icon circled far fa-envelope"></i></a>
+						<a class="button nav-network" href="https://www.linkedin.com/in/jordan-sandri-687529174/"><i class="icon circled fab fa-linkedin"></i></a>
+						<a class="button nav-network" href="https://github.com/JordanFist"><i class="icon circled fab fa-github"></i></a>
+					</div>
 				</nav>
 
 				<!-- Header -->
 				<header>
+					<div class="language">
+						<a class="button flag" href="index_en.html"><img class="image tiny" src="images/american_flag.jpg" alt="american flag" /><span>EN</span></a>
+						<a class="button flag active" href="index_fr.html"><img class="image tiny" src="images/french_flag.png" alt="french flag" /><span>FR</span></a>
+					</div>
 					<div class="content">
 						<div class="inner">
 							<h1>Jordan Sandri</h1>
@@ -102,13 +107,14 @@
 						</div>
 					</div>
 					<div class="animation animation--resume">
-						<a class="button resume" href="#"><i class="icon small resume fas fa-arrow-circle-down"></i>Download Resume</a>
+						<a class="button resume" href="docs/resume.pdf" download="Jordan Sandri - Resume.pdf"><i class="icon small resume fas fa-arrow-circle-down"></i><span>Download Resume</span></a>
 					</div>
 				</header>
 
 				<!-- Main -->
 				<div id="main">
 					
+					<!-- Identity Section -->
 					<section id="identity" class="identity">
 						<div class="profile-picture__container">
 							<img class="image profile-picture" src="images/profile_picture.jpg" alt="profile picture" />
@@ -117,12 +123,12 @@
 							<div class="row">
 								<div class="col-lg-6 col-md-12">
 									<div class="tile__wrapper">
-										<div class="tile identity__about-me">
-											<h2>About me</h2>
+										<div class="tile tile--cut tile__left">
+											<h3>About me</h3>
 											<ul>
 												<li><i class="icon small fas fa-user"></i>Jordan Sandri</li>
 												<li><i class="icon small fas fa-flag"></i>French</li>
-												<li><i class="icon small fa fa-envelope"></i><a class="button" href="mailto:jsandri@enseirb-matmeca.fr"><span>jsandri@enseirb-matmeca.fr</span></a></li>
+												<li><i class="icon small fa fa-envelope"></i><a class="button button-copiable" aria-label="Copy mail" data-balloon-position="top" data-clipboard-text="jsandri@enseirb-matmeca.fr"><span>jsandri@enseirb-matmeca.fr</span></a></li>
 												<li><i class="icon small fa fa-linkedin"></i><a class="button" href="https://www.linkedin.com/in/jordan-sandri-687529174/"><span>LinkedIn</span></a></li>
 												<li><i class="icon small fab fa-github"></i><a class="button" href="https://github.com/JordanFist"><span>GitHub</span></a></li>
 											</ul>
@@ -131,9 +137,9 @@
 								</div>
 								<div class="col-lg-6 col-md-12">
 									<div class="tile__wrapper">
-										<div class="tile identity__profile">
-											<h2>Profile</h2>
-											<p class="indent">Freshly graduated, I got my master's degree as a computer scientist. I am currently looking for a place where . Mes connaissances proviennent des quatre coins du monde !</p>
+										<div class="tile tile--cut tile__right">
+											<h3>Profile</h3>
+											<p class="indent">Freshly graduated, I got my master's degree as a computer scientist. Wishing to expand my skills beyond what France could bring me, I carried out my internships and part of my studies abroad as an international engineer. I am currently looking for an opportunity to kick off my engineering career.</p>
 										</div>
 									</div>
 								</div>
@@ -147,7 +153,7 @@
 							<h2>Education</h2>
 							<img class="flower" src="images/flower.png">
 						</div>
-							<div class="container-fluid">
+						<div class="container-fluid">
 							<div class="row">
 								<div class="col-lg-6 col-md-12">
 									<div class="tile">
@@ -169,8 +175,6 @@
 										<p>2019 - 2020</p>
 									</div>
 								</div>
-							</div>
-							<div class="row">
 								<div class="col-lg-6 col-md-12">
 									<div class="tile">
 										<h3>Lycée Paul Cézanne</h3>
@@ -195,59 +199,62 @@
 
 					<!-- Work Experience Section -->
 					<section id="experience" class="experience">
-						<div class="container_fluid">
+						<div class="title__frame">
+							<h2>Work Experience</h2>
+							<img class="flower" src="images/flower.png">
+						</div>
+						<div class="container-fluid">
 							<div class="row">
-								<h2>Work Experience</h2>
-							</div>
-							<div class="col-lg-12">
-								<div class="tile">
-									<div class="row">
-										<div class="my-auto col-lg-3">
-											<img class="image square" src="images/evagroup.png" alt="Eva Group logo"/>
-										</div>
-										<div class="col-lg-9">
-											<div class="experience__writing">
-												<div class="vertical_divider"></div>
-												<h3>EvaGroup</h3>
-												<p class="indent">Cloud internship in which I deployed Elastic tools (Filebeat, Logstash, Elasticsearch, Kibana) on EC2 with AWS for network device(such as Cisco Asa), Radius, and Netflow logs allowing the company to check the status of its network and devices on dashboards.</p>
-												<p class="place"><i class="icon small fas fa-map-marker-alt"></i>Bugis, Singapore</p>
-												<p>June - August 2019 (3 months)</p>
+								<div class="col-lg-12">
+									<div class="tile">
+										<div class="row">
+											<div class="col-lg-3 col-md-12">
+												<img class="image square" src="images/evagroup.png" alt="Eva Group logo"/>
+											</div>
+											<div class="col-lg-9 col-md-12">
+												<div class="experience__writing">
+													<div class="vertical_divider"></div>
+													<h3>EvaGroup</h3>
+													<p class="indent">Cloud internship in which I deployed Elastic tools (Filebeat, Logstash, Elasticsearch, Kibana) on EC2 with AWS for network device(such as Cisco Asa), Radius, and Netflow logs allowing the company to check the status of its network and devices on dashboards.</p>
+													<p class="place"><i class="icon small fas fa-map-marker-alt"></i>Bugis, Singapore</p>
+													<p>June - August 2019 (3 months)</p>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-lg-12">
-								<div class="tile">
-									<div class="row">
-										<div class="my-auto col-lg-3">
-											<img class="image square" src="images/bnp_paribas.jpg" alt="BNP Paribas logo"/>
-										</div>
-										<div class="col-lg-9">
-											<div class="experience__writing">
-												<div class="vertical_divider"></div>
-												<h3>BNP Paribas</h3>
-												<p class="indent">During my last month of internship at EvaGroup, I worked simultaneously at BNP Paribas. Accustomed to these tools for two months I installed Elastic tools on SIEM servers (Linux and Windows) in UAT (User Acceptance Testing), had Scrum meetings every morning, and wrote up the documentation for the production team.</p>
-												<p class="place"><i class="icon small fas fa-map-marker-alt"></i>Raffles Place, Singapore</p>
-												<p>August 2019 (1 month)</p>
+								<div class="col-lg-12">
+									<div class="tile">
+										<div class="row">
+											<div class="col-lg-3 col-md-12">
+												<img class="image square" src="images/bnp_paribas.jpg" alt="BNP Paribas logo"/>
+											</div>
+											<div class="col-lg-9 col-md-12">
+												<div class="experience__writing">
+													<div class="vertical_divider"></div>
+													<h3>BNP Paribas</h3>
+													<p class="indent">During my last month of internship at EvaGroup, I worked simultaneously at BNP Paribas. Accustomed to these tools for two months I installed Elastic tools on SIEM servers (Linux and Windows) in UAT (User Acceptance Testing), had Scrum meetings every morning, and wrote up the documentation for the production team.</p>
+													<p class="place"><i class="icon small fas fa-map-marker-alt"></i>Raffles Place, Singapore</p>
+													<p>August 2019 (1 month)</p>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-lg-12">
-								<div class="tile">
-									<div class="row">
-										<div class="my-auto col-lg-3">
-											<img class="image square" src="images/stellenbosch_university.jpeg" alt="Stellenbosch University logo"/>
-										</div>
-										<div class="col-lg-9">
-											<div class="experience__writing">
-												<div class="vertical_divider"></div>
-												<h3>Stellenbosch University</h3>
-												<p class="indent">My first internship as an engineering student in computer science. I learned java and coded the Carcassonne board game with a graphical interface. It was also my first steps in machine learning by making a binary classifier.</p>
-												<p class="place"><i class="icon small fas fa-map-marker-alt"></i>Stellenbosch, South Africa</p>
-												<p>July - August 2018 (2 months)</p>
+								<div class="col-lg-12">
+									<div class="tile">
+										<div class="row">
+											<div class="col-lg-3 col-md-12">
+												<img class="image square" src="images/stellenbosch_university.jpeg" alt="Stellenbosch University logo"/>
+											</div>
+											<div class="col-lg-9 col-md-12">
+												<div class="experience__writing">
+													<div class="vertical_divider"></div>
+													<h3>Stellenbosch University</h3>
+													<p class="indent">My first internship as an engineering student in computer science. I learned java and coded the Carcassonne board game with a graphical interface. It was also my first steps in machine learning by making a binary classifier.</p>
+													<p class="place"><i class="icon small fas fa-map-marker-alt"></i>Stellenbosch, South Africa</p>
+													<p>July - August 2018 (2 months)</p>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -258,10 +265,11 @@
 
 					<!-- University Project Section -->
 					<section id="projects" class="projects">
+						<div class="title__frame">
+							<h2>University Projects</h2>
+							<img class="flower" src="images/flower.png">
+						</div>
 						<div class="container-fluid">
-							<div class="row">
-								<h2>University Projects</h2>
-							</div>
 							<div class="row">
 								<div class="col-lg-6 col-md-12">
 									<div class="tile">
@@ -292,18 +300,19 @@
 
 					<!-- Skills Section -->
 					<section id="skills" class="skills">
+						<div class="title__frame">
+							<h2>Skills</h2>
+							<img class="flower" src="images/flower.png">
+						</div>
 						<div class="container-fluid">
-							<div class="row">
-								<h2>Skills</h2>
-							</div>
 							<div class="row">
 								<div class="col-lg-4 col-md-6">
 									<div class="tile">
 										<div class="icon__frame">
-											<i class="icon circled fas fa-laptop-code"></i>
+											<i class="icon semi-circled fas fa-laptop-code"></i>
 										</div>
 										<h4>Programming Languages</h4>
-										<p class="indent">I learned and practiced through real engineering school projects all these languages.</p>
+										<p class="indent">I have learned and practiced through engineering school projects all these languages for three years.</p>
 										<div class="skills__icons">
 											<span>C</span> <span>C++</span> <span>Java</span> <span>Python</span> <span>Bash</span> <span>Assembly Language(x86)</span> <span>Matlab</span> <span>SQL</span> <span aria-label="Scheme, R, Latex" data-balloon-position="top">...<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i></span> 
 										</div>
@@ -312,34 +321,34 @@
 								<div class="col-lg-4 col-md-6">
 									<div class="tile">
 										<div class="icon__frame">
-											<i class="icon circled fas fa-cloud"></i>
+											<i class="icon semi-circled fas fa-cloud"></i>
 										</div>
 										<h4>Cloud Computing</h4>
 										<p class="indent">My internships and my exchange in sweden shaped my cloud knowledge combining theory and projects.</p>
 										<div class="skills__icons">
-											<span aria-label="EC2, S3, IAM" data-balloon-position="top">AWS Services<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i></span> <span>Ansible</span> <span aria-label="Elasticsearch, Logstash, Kibana, Filebeat" data-balloon-position="top">Elastic Stack<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i> </span> <span>Docker</span> <span>Prometheus</span> <span>Grafana</span> <span>AlertManager</span> <span>Webhook</span>
+											<span aria-label="EC2, S3, IAM" data-balloon-position="top">AWS Services<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i></span> <span>Ansible</span> <span class="balloon--resized" aria-label="Elasticsearch, Logstash, Kibana, Filebeat" data-balloon-position="top">Elastic Stack<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i></span> <span>Docker</span> <span class="balloon--resized" aria-label="Prometheus, Grafana, AlertManager" data-balloon-position="top">Monitoring Tools<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i></span>  <span>Webhook</span>
 										</div>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-6">
 									<div class="tile">
 										<div class="icon__frame">
-											<i class="icon circled fas fa-brain"></i>
+											<i class="icon semi-circled fas fa-brain"></i>
 										</div>
 										<h4>Artificial Intelligence</h4>
-										<p class="indent">Othello AI, ANN handwriting recognition, or map-making ... and other projects</p>
+										<p class="indent">An Othello AI, a handwriting recognition ANN, or mapping an area with a robot are projects I made.</p>
 										<div class="skills__icons">
-											<span aria-label="&alpha;&beta; Pruning, Iterative Deepening, A*, SAT, MRDS" data-balloon-position="top">AI<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i></span> <span aria-label="SVM, Random Forests, AdaBoost, K-nearest neighbors, Naive Bayesian" data-balloon-position="top">Machine Learning<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i></span> <span aria-label="Keras, Artificial Neural Network">Deep Learning<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i></span> <span aria-label="approximate solutions to solve the multi-armed bandit">Reinforcement Learning<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i></span>
-										</div>
+											<span class="balloon--resized" aria-label="&alpha;&beta; Pruning, Iterative Deepening, A*, SAT, MRDS" data-balloon-position="top">AI<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i></span> <span class="balloon--resized" aria-label="SVM, Random Forests, AdaBoost, K-nearest neighbors, Naive Bayesian" data-balloon-position="top">Machine Learning<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i></span> <span aria-label="Keras, Artificial Neural Network">Deep Learning<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i></span> <span class="balloon--resized" aria-label="approximate solutions to solve the multi-armed bandit problem">Reinforcement Learning<i class="icon tiny animation--icon-tiny fas fa-info-circle"></i></span>
+											</div>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-6">
 									<div class="tile">
 										<div class="icon__frame">
-											<i class="icon circled fab fa-html5"></i>
+											<i class="icon semi-circled fab fa-html5"></i>
 										</div>
 										<h4>Web Development</h4>
-										<p class="indent">I started out web alone during Covid-19 lockdown. I am now able to produce and design a website like this.</p>
+										<p class="indent">I started out web alone during Covid-19 lockdown. I am now able to design a full responsive website like this.</p>
 										<div class="skills__icons">
 											<span>HTML5</span> <span>CSS3</span> <span>SCSS</span> <span>Javascript</span> <span>JQuery</span> <span>Bootstrap</span>
 										</div>
@@ -348,7 +357,7 @@
 								<div class="col-lg-4 col-md-6">
 									<div class="tile">
 										<div class="icon__frame">
-											<i class="icon circled fas fa-code"></i>
+											<i class="icon semi-circled fas fa-code"></i>
 										</div>
 										<h4>Other Tools</h4>
 										<p class="indent">I also learned plenty of various tools in the course of these three years of engineering school.</p>
@@ -360,7 +369,7 @@
 								<div class="col-lg-4 col-md-6">
 									<div class="tile">
 										<div class="icon__frame">
-											<i class="icon circled fab fa-apple"></i>
+											<i class="icon semi-circled fab fa-apple"></i>
 										</div>
 										<h4>Operating Systems</h4>
 										<p class="indent">I usually develop on MacOS and use Linux at school or in internship. However, I am able to adapt to any operating system.</p>
@@ -372,10 +381,10 @@
 								<div class="col-lg-4 col-md-6">
 									<div class="tile">
 										<div class="icon__frame">
-											<i class="icon circled fas fa-tasks"></i>
+											<i class="icon semi-circled fas fa-tasks"></i>
 										</div>
 										<h4>Project Management</h4>
-										<p class="indent">Engineering culture is crucial, that is why I had lectures on management, quality, finance, and was introduced to Scrum and Agile methods.</p>
+										<p class="indent">Engineering culture is crucial, that is why I had classes in management, quality, finance, and Scrum and Agile methods.</p>
 										<div class="skills__icons">
 											<span>Agile</span> <span>Scrum</span> <span>Management</span> <span>Finance</span>
 										</div>
@@ -384,10 +393,10 @@
 								<div class="col-lg-4 col-md-6">
 									<div class="tile">
 										<div class="icon__frame">
-											<i class="icon circled fas fa-language"></i>
+											<i class="icon semi-circled fas fa-language"></i>
 										</div>
 										<h4>Languages</h4>
-										<p class="indent">Native French speaker, fluent in English, fairly good command of Italian and basic knowledge in Chinese.</p>
+										<p class="indent">Native French speaker, fluent in English, fairly good command of Italian, and basic knowledge in Chinese.</p>
 										<div class="skills__icons">
 											<span>French</span> <span>English</span> <span>Italian</span> <span>Chinese</span> 
 										</div>
@@ -396,68 +405,64 @@
 								<div class="col-lg-4 col-md-6">
 									<div class="tile">
 										<div class="icon__frame">
-											<i class="icon circled far fa-smile"></i>
+											<i class="icon semi-circled far fa-smile"></i>
 										</div>
 										<h4>Other Skills</h4>
-										<p class="indent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+										<p class="indent">Honest, Curious, Patient, Pedagogical, Adaptable, ease of communication, Positive behavior even in critical situations.</p>
 									</div>
 								</div>
 							</div>
-							
 						</div>
 					</section>
 
 					<!-- Hobbies Section -->
 					<section id="hobbies" class="hobbies">
+						<div class="title__frame">
+							<h2>Hobbies</h2>
+							<img class="flower" src="images/flower.png">
+						</div>
 						<div class="container-fluid">
-							<div class="row">
-								<h2>Hobbies</h2>
-							</div>
 							<div class="row">
 								<div class="col-lg-6 col-md-12">
 									<div class="tile">
 										<img class="image full-width" src="images/travelling.jpeg" />
 										<h3>Travelling</h3>
-										<p class="indent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+										<p class="indent">Through my quest as an international engineer, I traveled the world. From the depths of the savannah of Zimbabwe to the polar nights of the north cape, I discovered breathtaking places and met incredible people.</p>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-12">
 									<div class="tile">
 										<img class="image full-width" src="images/band.jpg" />
 										<h3>Music</h3>
-										<p class="indent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+										<p class="indent">I have been playing music since childhood. More than ten-year guitar practice, ukulele, and drums for pleasure. I played in multiple bands and performed some concerts for the engineering school music club or a small audience.</p>
 									</div>
 								</div>
-							</div>
-							<div class="row">
 								<div class="col-lg-6 col-md-12">
 									<div class="tile">
 										<img class="image full-width" src="images/chess.jpg" />
 										<h3>Chess</h3>
-										<p class="indent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+										<p class="indent">Chess has become a passion recently. I have played regularly for 2 years now and learned on my own. I opened up the chess club of my engineering school, taught, and organized some tournaments between students.</p>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-12">
 									<div class="tile">
 										<img class="image full-width" src="images/cinema.jpg" />
 										<h3>Cinema</h3>
-										<p class="indent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+										<p class="indent">I was brought up by the cinema very early. First off, enthralled and fascinated about the image that cinema gives off wanting to watch all the classics. Today, also interested in actors, their filmography, critiques.</p>
 									</div>
 								</div>
-							</div>
-							<div class="row">
 								<div class="col-lg-6 col-md-12">
-									<div class="tile tile--no-margin">
+									<div class="tile">
 										<img class="image full-width" src="images/hackathon.jpg" />
 										<h3>Hackathon</h3>
-										<p class="indent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+										<p class="indent">I participated in the Hackathon of Bordeaux two times in a row. Gathering students from around the world for an entire night in order to achieve a project was a real occasion to learn new languages and experience a genuine adventure.</p>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-12">
-									<div class="tile tile--no-margin">
+									<div class="tile">
 										<img class="image full-width" src="images/bmx.jpg" />
 										<h3>BMX</h3>
-										<p class="indent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+										<p class="indent">My brand new pastime. It is an indefinable real pleasure to manage to perform basic tricks in the street or in a bowl. Unfortunately, I cannot bring my bike on my adventures. Finally, all I want is to ride my bicycle where I like.</p>
 									</div>
 								</div>
 							</div>
@@ -468,9 +473,9 @@
 
 				<!-- Footer -->
 				<footer>
-					<hr>
+					<hr />
 					<div id="contact" class="contact">
-						<div class="contact__mail button network" aria-label="Copy mail" data-balloon-position="top"><i class="icon big far fa-envelope"></i></div>
+						<a class="button network" href="mailto:jsandri@enseirb-matmeca.fr"><i class="icon big far fa-envelope"></i></a>
 						<a class="button network" href="https://www.linkedin.com/in/jordan-sandri-687529174/"><i class="icon big fab fa-linkedin"></i></a>
 						<a class="button network" href="https://github.com/JordanFist"><i class="icon big fab fa-github"></i></a>
 					</div>
@@ -478,16 +483,16 @@
 				</footer>
 			</div>
 			<!-- End Wrapper -->
-		</div>
-		<!-- End Background -->
 
 		<!-- Scripts -->
 		<script src="https://code.jquery.com/jquery-3.5.0.min.js"   integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="   crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script src="https://kit.fontawesome.com/79d31741ba.js" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+		<script src="assets/js/skrollr.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/clipboard.min.js"></script>
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>

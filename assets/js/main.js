@@ -69,7 +69,7 @@
 				$body.removeClass("is-preload");
 			}, 100);
 		});
-
+	
 	// Display the right year in the footer.
 		var date = new Date();
 
@@ -194,11 +194,12 @@
 
 			}
 		});
-
+		
 	// Disable Skrollr on portable devices.
 	Breakpoints.get("portable").on("enter", function() {
 		if (skrollr.get()) {
 			skrollr.get().destroy();
+			$body.removeClass("is-preload"); // Prevent skrollr from resetting is-preload when destroyed
 		}
 		$body.removeClass("parallax");
 		$body.append("<div id='background'></div>");
@@ -217,10 +218,8 @@
 
 		});
 		
-	
-
 	/* Fix Section */ 
-
+		
 	// Prevent the overlay from staying open if resize.
 	Breakpoints.get("portable").on("leave", function() {
 		if ($nav.hasClass("expanded")) {
@@ -253,6 +252,10 @@
 				$nav_toggle_opening.addClass("alt");
 			}
 
+		});
+	
+		$window.resize(function() {
+			console.log($body.hasClass("is-preload"));
 		});
 	  
 })(jQuery);

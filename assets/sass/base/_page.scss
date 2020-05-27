@@ -9,7 +9,8 @@ html, body {
 
 body {
     &.parallax {
-        background: url("../../images/background2.jpeg") no-repeat center center fixed;
+        background: url("../../images/background2.jpeg") no-repeat fixed;
+        background-position-x: center;
         background-size: cover;
     }
 }

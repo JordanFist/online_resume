@@ -1,13 +1,13 @@
 .animation {
 
-    &--resume {
+    &.bounce-in-up {
         //opacity: 0;
         //animation-name: bounceInUp;
         animation-delay: 4s;
         animation-duration: 2s;
         animation-fill-mode: forwards;
     }
-    &--icon-tiny {
+    &.bounce-in-wait {
         animation: bounceInWait 11s infinite;
     }
 }
