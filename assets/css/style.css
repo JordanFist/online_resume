@@ -293,7 +293,6 @@ footer p {
   display: flex;
   border: 2px solid #eeeeee;
   border-radius: 50%;
-  margin-right: 0.8rem;
   transition: border-color 0.2s ease-in-out;
   line-height: 1rem;
   height: 2rem;
@@ -315,7 +314,6 @@ footer p {
 .button.flag {
   display: flex;
   align-items: center;
-  margin-left: 1rem;
 }
 @media (any-hover: none) {
   .button.flag:active {
@@ -483,6 +481,9 @@ nav hr {
 nav .nav__contact {
   display: none;
 }
+nav .language {
+  display: none;
+}
 nav svg {
   height: 12px;
   width: 12px;
@@ -512,9 +513,11 @@ nav a.link__active svg {
     top: 0;
     right: -263px;
     height: 100vh;
+    width: 263px;
     text-align: left;
     background-color: white;
-    padding: 0.8rem 6rem 3rem 2rem;
+    padding-top: 1.3rem;
+    padding-bottom: 2rem;
     overflow: scroll;
     z-index: 11;
     transform: scale(1);
@@ -531,8 +534,11 @@ nav a.link__active svg {
     border: none;
     margin: 0.3rem auto;
     height: 2px;
-    width: 150%;
+    width: 100%;
     background-color: #eeeeee;
+  }
+  nav ul {
+    padding: 0 2.5rem;
   }
   nav svg {
     display: none;
@@ -551,11 +557,22 @@ nav a.link__active svg {
   }
   nav .nav__contact {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 1.5rem;
-    position: relative;
-    left: 24%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  nav .nav__contact > :nth-child(2) {
+    margin: 0 1rem;
+  }
+  nav .language {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  nav .language > :first-child {
+    margin-right: 1rem;
+  }
+  nav .language span {
+    padding: 0;
   }
 }
 
@@ -590,9 +607,9 @@ nav a.link__active svg {
     color: #212931;
   }
   .nav-toggle.closing {
-    display: inline;
+    display: inline-flex;
     position: relative;
-    left: 12.2rem;
+    left: 14rem;
   }
 }
 
@@ -628,6 +645,9 @@ header .language {
   align-self: flex-end;
   padding: 0.5rem 1rem;
 }
+header .language > :first-child {
+  margin-right: 1rem;
+}
 @media screen and (max-width: 1200px) {
   header .language {
     display: none;
@@ -645,26 +665,20 @@ header .main-title {
   }
 }
 header .content {
-  border-top: 2px solid #deb887;
-  border-bottom: 2px solid #deb887;
-  max-width: 100%;
-  transition: border-color 2s ease-in;
-}
-body.is-preload header .content {
-  border-color: white;
-}
-header .content .inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  border-top: 2px solid #deb887;
+  border-bottom: 2px solid #deb887;
+  max-width: 100%;
   padding: 2.5rem 2rem;
-  transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-  transition-delay: 0.25s;
+  transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out, border-color 1s ease 0.75s;
   max-height: 40rem;
   overflow: hidden;
 }
-body.is-preload header .content .inner {
+body.is-preload header .content {
+  border-color: white;
   max-height: 0;
   padding-top: 0;
   padding-bottom: 0;

@@ -24,6 +24,9 @@ header {
         display: flex;
         align-self: flex-end;
         padding: 0.5rem 1rem;
+        > :first-child {
+            margin-right: 1rem;
+        }
         @include tablet-landscape {
             display: none;
         }
@@ -39,31 +42,24 @@ header {
         }
     }
     .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         border-top: 2px solid map-get($palette, accent);
         border-bottom: 2px solid map-get($palette, accent);
         max-width: 100%;
-        transition: border-color 2s ease-in;
+        padding: 2.5rem 2rem;
+        transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out, border-color 1s ease 0.75s;
+        max-height: 40rem;
+        overflow: hidden;
 
         body.is-preload & {
             border-color: white;
-        }
-
-        .inner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 2.5rem 2rem;
-            transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-            transition-delay: 0.25s;
-            max-height: 40rem;
-            overflow: hidden;
-            body.is-preload & {
-                max-height: 0;
-                padding-top: 0;
-                padding-bottom: 0;
-                //opacity: 0;
-            }
+            max-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            //opacity: 0;
         }
     }
     /*body.is-preload & {
