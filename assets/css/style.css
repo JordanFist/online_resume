@@ -79,7 +79,7 @@ html, body {
 }
 
 body.parallax {
-  background: url("../../images/background2.jpeg") no-repeat fixed;
+  background: url("../../images/background.jpeg") no-repeat fixed;
   background-position-x: center;
   background-size: cover;
 }
@@ -446,7 +446,7 @@ ul {
 }
 #background:after {
   z-index: -10;
-  background-image: url("../../images/background2.jpeg");
+  background-image: url("../../images/background.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
