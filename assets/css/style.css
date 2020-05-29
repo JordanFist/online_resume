@@ -566,7 +566,7 @@ nav a.link__active svg {
   nav .language {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
   nav .language > :first-child {
     margin-right: 1rem;
@@ -781,6 +781,18 @@ footer .copyright {
 /* Pages */
 .identity {
   position: relative;
+  /*.tile:after {
+      content: '';
+      z-index: -1;
+      top: 1rem;
+      left: 1.8rem;
+      filter: blur(20px);
+      position: absolute;
+      background-image: radial-gradient(circle at -1.4% 0px, rgba(0, 0, 0, 0) 0, rgb(222, 184, 135, 0) 105px, rgba(0, 0, 0, 1) 105px);
+      height: 90%;
+      transform: translateY(2%);
+      width: 90%;
+  }*/
 }
 .identity h3 {
   display: inline-block;

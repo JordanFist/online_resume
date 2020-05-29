@@ -26,6 +26,18 @@
         min-width: 200px;
         z-index: 1;
     }
+    /*.tile:after {
+        content: '';
+        z-index: -1;
+        top: 1rem;
+        left: 1.8rem;
+        filter: blur(20px);
+        position: absolute;
+        background-image: radial-gradient(circle at -1.4% 0px, rgba(0, 0, 0, 0) 0, rgb(222, 184, 135, 0) 105px, rgba(0, 0, 0, 1) 105px);
+        height: 90%;
+        transform: translateY(2%);
+        width: 90%;
+    }*/
     .tile__wrapper {
         //filter: drop-shadow(0 5px 8px rgb(0, 0, 0, 0.4));
     }

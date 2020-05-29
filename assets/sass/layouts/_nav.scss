@@ -45,6 +45,7 @@ nav {
             }
         }
     }
+
     @include tablet-landscape {
         top: 0;
         right: -263px; // Can't apply translateX due to a jumpy navbar bug (263px = width of the navbar)
@@ -107,7 +108,7 @@ nav {
         .language {
             display: flex;
             justify-content: center;
-            margin-top: 2rem;
+            margin-top: 2.5rem;
             > :first-child {
                 margin-right: 1rem;
             }
