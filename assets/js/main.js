@@ -2,6 +2,7 @@
 
 	// Useful variables.
 		var	$window = $(window),
+			$html = $("html",)
 			$body = $("body"),
 			$header = $("header"),
 			$wrapper = $("#wrapper"),
@@ -59,6 +60,14 @@
 				return false;
 			}
 			return true;
+		}
+
+	// Return true if the page is in English.
+		function is_english() {
+			if ($html.attr("lang") == "en") {
+				return true;
+			}
+			return false;
 		}
 
 	/* Main functions */
@@ -185,11 +194,12 @@
 		$button.on("click", function() {
 			if (!$button.hasClass("copied")) {
 				$button.attr("aria-label", "Copied!");
-				$button.attr("data-balloon-visible", "");
 				$button.addClass("copied");
+				$button.attr("data-balloon-visible", "");
 
 				window.setTimeout(function() {
-					$button.removeAttr("data-balloon-visible", "");
+					$button.removeAttr("data-balloon-visible");
+					$button.removeAttr("aria-label");
 				}, 1000);
 
 				window.setTimeout(function() {
