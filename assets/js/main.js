@@ -179,13 +179,18 @@
 		});
 	
 	// Display the infobulle and copy my mail in the clipboard.
-		var $button = $(".button-copiable");
-		new ClipboardJS(".button-copiable");
+		var $button = $(".copiable");
+		new ClipboardJS(".copiable");
 
 		$button.on("click", function() {
 			if (!$button.hasClass("copied")) {
 				$button.attr("aria-label", "Copied!");
+				$button.attr("data-balloon-visible", "");
 				$button.addClass("copied");
+
+				window.setTimeout(function() {
+					$button.removeAttr("data-balloon-visible", "");
+				}, 1000);
 
 				window.setTimeout(function() {
 					$button.removeClass("copied");
@@ -252,10 +257,6 @@
 				$nav_toggle_opening.addClass("alt");
 			}
 
-		});
-	
-		$window.resize(function() {
-			console.log($body.hasClass("is-preload"));
 		});
 	  
 })(jQuery);

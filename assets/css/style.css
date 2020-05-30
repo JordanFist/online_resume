@@ -74,8 +74,6 @@ input, select, textarea {
 html, body {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  height: 100%;
-  width: 100%;
 }
 
 body.parallax {
@@ -343,10 +341,10 @@ footer p {
     color: burlywood;
   }
 }
-.button-copiable {
+.button.copiable {
   display: inline-block;
 }
-.button-copiable.copied {
+.button.copiable.copied {
   animation: 1s bounceIn;
 }
 .button.resume {

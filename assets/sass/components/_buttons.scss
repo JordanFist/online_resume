@@ -89,7 +89,7 @@
         }
     }
 
-    &-copiable {
+    &.copiable {
         display: inline-block;
         &.copied {
             animation: 1s bounceIn;
