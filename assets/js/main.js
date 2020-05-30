@@ -1,5 +1,9 @@
 (function($) {
 
+	if (browser.name == 'safari') {
+		alert("test");
+	}
+
 	// Useful variables.
 		var	$window = $(window),
 			$html = $("html",)
@@ -49,9 +53,9 @@
 
 	// Decrease the value of is_active.
 		function decrease(a) {
-		if (a.is_active > 0) {
-			a.is_active -= 1;
-		}
+			if (a.is_active > 0) {
+				a.is_active -= 1;
+			}
 	}
 
 	// Return true if a is active.
@@ -193,18 +197,20 @@
 
 		$button.on("click", function() {
 			if (!$button.hasClass("copied")) {
-				$button.attr("aria-label", "Copied!");
+				if (is_english()) {
+					$button.attr("aria-label", "Copied!");
+				} else { 
+					$button.attr("aria-label", "Copié !");
+				}
 				$button.addClass("copied");
-				$button.attr("data-balloon-visible", "");
-
-				window.setTimeout(function() {
-					$button.removeAttr("data-balloon-visible");
-					$button.removeAttr("aria-label");
-				}, 1000);
 
 				window.setTimeout(function() {
 					$button.removeClass("copied");
-					$button.attr("aria-label", "Copy mail");
+					if (is_english()) {
+						$button.attr("aria-label", "Copy mail");
+					} else { 
+						$button.attr("aria-label", "Copier mail");
+					}
 				}, 2000);
 
 			}
