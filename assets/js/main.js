@@ -186,12 +186,6 @@
 		$body.on("click", "#overlay", function () {
 			closing();
 		});
-
-	// Close the navbar if swipe left
-	$nav.touch();
-	$nav.on('swipeRight', function() {
-		closing();
-	  });
 	
 	// Display the infobulle and copy my mail in the clipboard.
 		var $button = $(".copiable");
@@ -279,7 +273,7 @@
 
 	// Add shadows on the first section (it is laggy on safari)
 		if (browser.name != 'safari') {
-			//add shadow class
+			$(".tile__wrapper").addClass("shadow");
 		}
 	  
 })(jQuery);

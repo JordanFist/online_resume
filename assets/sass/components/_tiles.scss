@@ -5,10 +5,34 @@
     border-radius: 3px;
     box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.5);
     //background-image: url("../../images/blurry-overlay.png");
-    &--cut {
+    &__wrapper {
+        margin-bottom: 1rem;
+        &.shadow {
+            filter: drop-shadow(0 5px 8px rgb(0, 0, 0, 0.4));
+        }
+        @include tablet {
+            box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.5);
+        }
+    }
+    &.rounded {
         background-color: transparent;
         margin-bottom: 0;
         box-shadow: none;
+        height: 100%;
+        &.left-corner {
+            background-image: radial-gradient(circle at -1.4% 0px, rgba(0, 0, 0, 0) 0, rgb(222,184,135, 0) 105px, white 105px);
+            @include tablet {
+                background-image: none;
+                background-color: map-get($palette, main-background);
+            }
+        }
+        &.right-corner {
+            background-image: radial-gradient(circle at 101.4% 0px, rgba(0, 0, 0, 0) 0, rgb(222,184,135, 0) 105px, white 105px);
+            @include tablet {
+                background-image: none;
+                background-color: map-get($palette, main-background);
+            }
+        }
     }
 }
 
