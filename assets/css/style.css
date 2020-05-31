@@ -399,6 +399,7 @@ ul {
 }
 @media screen and (max-width: 992px) {
   .tile__wrapper {
+    filter: none;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
   }
 }
@@ -831,10 +832,13 @@ footer .copyright {
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 15%;
-  max-width: 200px;
-  min-width: 200px;
+  width: 200px;
   z-index: 1;
+}
+@media screen and (max-width: 992px) {
+  .identity .profile-picture__container {
+    width: 120px;
+  }
 }
 .identity .right-corner h3 {
   margin-left: 2rem;

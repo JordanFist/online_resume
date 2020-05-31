@@ -8,9 +8,10 @@
     &__wrapper {
         margin-bottom: 1rem;
         &.shadow {
-            filter: drop-shadow(0 5px 8px rgb(0, 0, 0, 0.4));
+            filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.4));
         }
         @include tablet {
+            filter: none;
             box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.5);
         }
     }
