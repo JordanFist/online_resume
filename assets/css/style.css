@@ -259,6 +259,11 @@ footer p {
   border-radius: 50%;
   border: 5px solid #ffffff;
 }
+@media screen and (max-width: 992px) {
+  .image.profile-picture {
+    border-bottom: none;
+  }
+}
 
 .button {
   cursor: pointer;
@@ -837,7 +842,12 @@ footer .copyright {
 }
 @media screen and (max-width: 992px) {
   .identity .profile-picture__container {
-    width: 120px;
+    width: 180px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .identity .profile-picture__container {
+    width: 130px;
   }
 }
 .identity .right-corner h3 {

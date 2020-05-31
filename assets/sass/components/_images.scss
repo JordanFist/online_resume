@@ -46,5 +46,8 @@
         width: 100%;
         border-radius: 50%;
         border: 5px solid map-get($palette, main-background);
+        @include tablet {
+            border-bottom: none;
+        }
     }
 }

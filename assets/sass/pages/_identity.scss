@@ -24,7 +24,10 @@
         width: 200px;
         z-index: 1;
         @include tablet {
-            width: 120px;
+            width: 180px;
+        }
+        @include mobile {
+            width: 130px;
         }
     }
     .right-corner {
