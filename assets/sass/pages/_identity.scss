@@ -24,10 +24,10 @@
         width: 200px;
         z-index: 1;
         @include tablet {
-            width: 180px;
+            width: 170px;
         }
         @include mobile {
-            width: 120px;
+            width: 150px;
         }
     }
     .right-corner {
@@ -36,6 +36,12 @@
         }
         h3:after {
             width: 135px;
+        }
+        @include tablet {
+            padding-top: 5rem;
+        }
+        @include mobile {
+            padding-top: 4rem;
         }
     }
     .left-corner {

@@ -842,12 +842,12 @@ footer .copyright {
 }
 @media screen and (max-width: 992px) {
   .identity .profile-picture__container {
-    width: 180px;
+    width: 170px;
   }
 }
 @media screen and (max-width: 576px) {
   .identity .profile-picture__container {
-    width: 120px;
+    width: 150px;
   }
 }
 .identity .right-corner h3 {
@@ -855,6 +855,16 @@ footer .copyright {
 }
 .identity .right-corner h3:after {
   width: 135px;
+}
+@media screen and (max-width: 992px) {
+  .identity .right-corner {
+    padding-top: 5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .identity .right-corner {
+    padding-top: 4rem;
+  }
 }
 .identity .left-corner {
   text-align: right;
