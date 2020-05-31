@@ -863,7 +863,7 @@ footer .copyright {
 }
 @media screen and (max-width: 576px) {
   .identity .right-corner {
-    padding-top: 4rem;
+    padding-top: 4.2rem;
   }
 }
 .identity .left-corner {
