@@ -847,7 +847,7 @@ footer .copyright {
 }
 @media screen and (max-width: 576px) {
   .identity .profile-picture__container {
-    width: 130px;
+    width: 120px;
   }
 }
 .identity .right-corner h3 {
