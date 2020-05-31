@@ -396,6 +396,11 @@ ul {
   border-radius: 3px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 576px) {
+  .tile {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+}
 .tile__wrapper {
   margin-bottom: 1rem;
 }
@@ -863,7 +868,7 @@ footer .copyright {
 }
 @media screen and (max-width: 576px) {
   .identity .right-corner {
-    padding-top: 4.2rem;
+    padding-top: 4.4rem;
   }
 }
 .identity .left-corner {
