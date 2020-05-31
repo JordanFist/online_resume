@@ -188,6 +188,7 @@
 		});
 
 	// Close the navbar if swipe left
+	$nav.touch();
 	$nav.on('swipeRight', function() {
 		closing();
 	  });
