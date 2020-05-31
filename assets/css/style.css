@@ -398,7 +398,7 @@ ul {
 }
 @media screen and (max-width: 576px) {
   .tile {
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 2.5rem 2.5rem 2.5rem 2.5rem;
   }
 }
 .tile__wrapper {
