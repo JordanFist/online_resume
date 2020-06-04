@@ -1,6 +1,7 @@
 .button {
     cursor: pointer;
     padding: 2px;
+    text-decoration: none;
     span {
         color: #212931;
     }
@@ -9,6 +10,7 @@
             transition: color 0.2s ease-in-out;
         }
         &:hover {
+            text-decoration: none;
             span, .icon {
                 color: burlywood;
             }

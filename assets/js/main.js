@@ -116,6 +116,11 @@
 			enter: 		function() {
 				increase($this[0]);
 				$this.addClass("link__active");
+
+				// Modify the navbar to be visible on dark background on desktop.
+				if ((id == "#skills") || (id == "#hobbies")) {
+					$nav.addClass("alt");
+				}
 			},
 
 			leave:		function() {
@@ -129,6 +134,10 @@
 						$this.removeClass("link__disabled");
 					}, 200);
 
+				}
+
+				if (id == "#skills") {
+					$nav.removeClass("alt");
 				}
 			}
 
@@ -235,7 +244,9 @@
 
 		});
 		
+	/*=============*/ 
 	/* Fix Section */ 
+	/*=============*/ 
 		
 	// Prevent the overlay from staying open if resize.
 	Breakpoints.get("portable").on("leave", function() {
