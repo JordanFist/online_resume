@@ -88,11 +88,11 @@ body.parallax {
 
 /* Type */
 html {
-  font-size: 16px;
+  font-size: 15px;
 }
 @media screen and (max-width: 576px) {
   html {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
@@ -271,12 +271,12 @@ footer p {
 .button span {
   color: #212931;
 }
+.button:hover {
+  text-decoration: none;
+}
 @media (any-hover: hover) {
   .button span, .button .icon {
     transition: color 0.2s ease-in-out;
-  }
-  .button:hover {
-    text-decoration: none;
   }
   .button:hover span, .button:hover .icon {
     color: burlywood;

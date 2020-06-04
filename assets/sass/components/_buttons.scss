@@ -5,12 +5,14 @@
     span {
         color: #212931;
     }
+    &:hover {
+        text-decoration: none;
+    }
     @include hoverable { 
         span, .icon {
             transition: color 0.2s ease-in-out;
         }
         &:hover {
-            text-decoration: none;
             span, .icon {
                 color: burlywood;
             }
