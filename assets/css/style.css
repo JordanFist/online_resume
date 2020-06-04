@@ -90,6 +90,11 @@ body.parallax {
 html {
   font-size: 16px;
 }
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 15px;
+  }
+}
 
 body {
   color: #212931;
