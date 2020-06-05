@@ -90,7 +90,7 @@ body.parallax {
 html {
   font-size: 16px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1200px) {
   html {
     font-size: 15px;
   }
@@ -424,20 +424,22 @@ ul {
 .tile.rounded.left-corner {
   background-image: radial-gradient(circle at -1.4% 0px, rgba(0, 0, 0, 0) 0, rgba(222, 184, 135, 0) 105px, white 105px);
 }
-@media screen and (max-width: 992px) {
-  .tile.rounded.left-corner {
-    background-image: none;
-    background-color: #ffffff;
-  }
-}
 .tile.rounded.right-corner {
   background-image: radial-gradient(circle at 101.4% 0px, rgba(0, 0, 0, 0) 0, rgba(222, 184, 135, 0) 105px, white 105px);
 }
 @media screen and (max-width: 992px) {
-  .tile.rounded.right-corner {
+  .tile.rounded.left-corner, .tile.rounded.right-corner {
     background-image: none;
     background-color: #ffffff;
   }
+}
+
+.row {
+  justify-content: center;
+}
+
+.container-fluid {
+  max-width: 1300px;
 }
 
 [class^=col-] {
@@ -445,11 +447,7 @@ ul {
   flex-direction: column;
 }
 
-[class^=col-] .tile {
-  flex: 1;
-}
-
-[class^=col-] .tile__wrapper {
+.tile, .tile__wrapper {
   flex: 1;
 }
 

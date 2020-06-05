@@ -25,13 +25,11 @@
         height: 100%;
         &.left-corner {
             background-image: radial-gradient(circle at -1.4% 0px, rgba(0, 0, 0, 0) 0, rgb(222,184,135, 0) 105px, white 105px);
-            @include tablet {
-                background-image: none;
-                background-color: map-get($palette, main-background);
-            }
         }
         &.right-corner {
             background-image: radial-gradient(circle at 101.4% 0px, rgba(0, 0, 0, 0) 0, rgb(222,184,135, 0) 105px, white 105px);
+        }
+        &.left-corner, &.right-corner {
             @include tablet {
                 background-image: none;
                 background-color: map-get($palette, main-background);
@@ -40,15 +38,19 @@
     }
 }
 
+.row {
+    justify-content: center;
+}
+
+.container-fluid {
+    max-width: 1300px;
+}
+
 [class^="col-"] {
     display: flex;
     flex-direction: column;
 }
 
-[class^="col-"] .tile {
-    flex:1;
-}
-
-[class^="col-"] .tile__wrapper {
+.tile, .tile__wrapper {
     flex:1;
 }
