@@ -68,3 +68,11 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+
+// Added to the original file
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}

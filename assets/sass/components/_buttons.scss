@@ -1,12 +1,8 @@
 .button {
     cursor: pointer;
     padding: 2px;
-    text-decoration: none;
     span {
         color: #212931;
-    }
-    &:hover {
-        text-decoration: none;
     }
     @include hoverable { 
         span, .icon {
