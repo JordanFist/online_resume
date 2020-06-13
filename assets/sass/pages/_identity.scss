@@ -21,14 +21,9 @@
         top: 0;
         left: 50%;
         transform: translate(-50%,-50%);
-        width: 200px;
+        width: 25%;
+        max-width: 200px;
         z-index: 1;
-        @include tablet {
-            width: 170px;
-        }
-        @include mobile {
-            width: 150px;
-        }
     }
     .right-corner {
         h3 {

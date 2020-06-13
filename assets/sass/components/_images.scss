@@ -5,6 +5,15 @@
         border-radius: 2px;
         box-shadow: 0 0.2rem 0.5rem rgb(0, 0, 0, 0.2);
     }
+    &.profile-picture {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        border: 5px solid map-get($palette, main-background);
+        @include tablet {
+            border-bottom: none;
+        }
+    }
     &.round {
         display: block;
         margin: 2rem auto;
@@ -40,14 +49,5 @@
         width: 100%;
         border-top-left-radius: map-get($size , tile-radius);
         border-top-right-radius: map-get($size , tile-radius);
-    }
-    &.profile-picture {
-        height: 100%;
-        width: 100%;
-        border-radius: 50%;
-        border: 5px solid map-get($palette, main-background);
-        @include tablet {
-            border-bottom: none;
-        }
     }
 }
