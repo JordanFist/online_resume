@@ -431,10 +431,10 @@ ul {
   height: 100%;
 }
 .tile.rounded.left-corner {
-  background-image: radial-gradient(circle at -1.4% 0px, rgba(0, 0, 0, 0) 0, rgba(222, 184, 135, 0) 105px, white 105px);
+  background-image: radial-gradient(circle at -0.8% 0px, rgba(0, 0, 0, 0) 0, rgba(222, 184, 135, 0) 105px, white 105px);
 }
 .tile.rounded.right-corner {
-  background-image: radial-gradient(circle at 101.4% 0px, rgba(0, 0, 0, 0) 0, rgba(222, 184, 135, 0) 105px, white 105px);
+  background-image: radial-gradient(circle at 100.8% 0px, rgba(0, 0, 0, 0) 0, rgba(222, 184, 135, 0) 105px, white 105px);
 }
 @media screen and (max-width: 992px) {
   .tile.rounded.left-corner, .tile.rounded.right-corner {
@@ -448,7 +448,7 @@ ul {
 }
 
 .container-fluid {
-  max-width: 1600px;
+  max-width: 2000px;
 }
 
 [class^=col-] {
