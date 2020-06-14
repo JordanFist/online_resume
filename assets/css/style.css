@@ -955,7 +955,6 @@ footer .copyright {
   border: 2px solid burlywood;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
   width: 90%;
-  max-width: 500px;
 }
 
 .skills .tile {
