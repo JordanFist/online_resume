@@ -257,8 +257,13 @@ footer p {
   display: block;
   margin: auto auto;
   width: 70%;
-  max-width: 150px;
+  max-width: 200px;
   min-width: 150px;
+}
+@media screen and (max-width: 1200px) {
+  .image.square {
+    max-width: 150px;
+  }
 }
 .image.framed {
   vertical-align: bottom;
