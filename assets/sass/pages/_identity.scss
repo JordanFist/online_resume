@@ -50,6 +50,10 @@
         }
         @include tablet {
             text-align: left;
+            h3 {
+                margin-left: 2rem;
+                margin-right: 0;
+            }
             h3:after {
                 left: 10px;
             }
