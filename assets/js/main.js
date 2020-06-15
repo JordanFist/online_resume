@@ -268,13 +268,15 @@
 
 		});*/
 
-		$("#skills span").each(function() {
-			var $this = $(this),
-				$window_width = window.innerWidth;
-
-			if ($this.getBoundingClientRect().width > $window_width) {
-				$this.attr("data-balloon-length", "medium");
-			}
+		window.addEventListener('resize', function(event) {
+			$("#skills span").each(function() {
+				var $this = $(this),
+					$window_width = window.innerWidth;
+	
+				if ($this.getBoundingClientRect().width > $window_width) {
+					$this.attr("data-balloon-length", "medium");
+				}
+			});
 		});
 
 	// Modify the navbar to be visible on white background on mobile.
