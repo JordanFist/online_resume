@@ -267,18 +267,20 @@
 			}
 
 		});*/
- 
-		window.addEventListener('resize', function(event) {
+
+		Breakpoints.get("portable").on("enter", function() {
 			$("#skills span").each(function() {
-				var $this = $(this),
+				var $this = $(this)[0],
 					$window_width = window.innerWidth;
-	
-				if ($this.getBoundingClientRect().width > $window_width) {
+
+					console.log($this.getBoundingClientRect().left)
+
+				if ($this.getBoundingClientRect().right > $window_width) {
 					$this.attr("data-balloon-length", "medium");
 				}
-			});
+			});	
 		});
-
+ 
 	// Modify the navbar to be visible on white background on mobile.
 		$header.scrollex({
 			bottom: "50px",
