@@ -267,13 +267,13 @@
 			}
 
 		});*/
-
+		alert(window.innerWidth)
 		Breakpoints.get("portable").on("enter", function() {
 			$("#skills span").each(function() {
 				var $this = $(this)[0],
 					$window_width = window.innerWidth;
 
-					console.log($this.getBoundingClientRect().left)
+					alert($this.getBoundingClientRect().right)
 
 				if ($this.getBoundingClientRect().right > $window_width) {
 					$this.attr("data-balloon-length", "medium");
