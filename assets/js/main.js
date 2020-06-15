@@ -256,7 +256,7 @@
 	});
 
 	// Fix balloon overflow for mobile devices.
-		Breakpoints.get("mobile").on({
+		/*Breakpoints.get("mobile").on({
 
 			enter: function() {
 				$(".balloon--resized").attr("data-balloon-length", "medium");
@@ -266,6 +266,15 @@
 				$(".balloon--resized").removeAttr("data-balloon-length");
 			}
 
+		});*/
+
+		$("#skills span").each(function() {
+			var $this = $(this),
+				$window_width = window.innerWidth;
+
+			if ($this.getBoundingClientRect().width > $window_width) {
+				$this.attr("data-balloon-length", "medium");
+			}
 		});
 
 	// Modify the navbar to be visible on white background on mobile.
