@@ -267,7 +267,7 @@
 			}
 
 		});*/
-
+ 
 		window.addEventListener('resize', function(event) {
 			$("#skills span").each(function() {
 				var $this = $(this),
