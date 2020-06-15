@@ -749,12 +749,12 @@ header .content {
 }
 @media screen and (max-width: 1200px) {
   #main {
-    margin: 0 2rem;
+    margin: 0 3rem;
   }
 }
 @media screen and (max-width: 992px) {
   #main {
-    margin: 0 3rem;
+    margin: 0 2rem;
   }
 }
 @media screen and (max-width: 576px) {
