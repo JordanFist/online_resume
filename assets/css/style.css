@@ -754,7 +754,7 @@ header .content {
 }
 @media screen and (max-width: 992px) {
   #main {
-    margin: 0 0rem;
+    margin: 0 3rem;
   }
 }
 @media screen and (max-width: 576px) {
