@@ -267,17 +267,18 @@
 			}
 
 		});*/
-		alert(window.innerWidth)
+		
+		// A partir de portable on met en medium ce qui depasse
 		Breakpoints.get("portable").on("enter", function() {
 			$("#skills span").each(function() {
-				var $this = $(this)[0],
+				var $this = $(this),
 					$window_width = window.innerWidth;
 
-					alert($this.getBoundingClientRect().right)
-
-				if ($this.getBoundingClientRect().right > $window_width) {
+					console.log(window.getComputedStyle($this[0], ':before').width)
+					
+				//if ($this[0].getBoundingClientRect().right > $window_width) {
 					$this.attr("data-balloon-length", "medium");
-				}
+				//}
 			});	
 		});
  
