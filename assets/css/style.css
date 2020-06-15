@@ -513,7 +513,7 @@ nav {
   transition-delay: 2s;
   text-align: right;
   position: fixed;
-  right: 1.5%;
+  right: 1.4rem;
   top: calc(50% - 114px);
   z-index: 1;
   /*body.is-preload & {
@@ -754,7 +754,7 @@ header .content {
 }
 @media screen and (max-width: 992px) {
   #main {
-    margin: 0 2rem;
+    margin: 0 0rem;
   }
 }
 @media screen and (max-width: 576px) {
