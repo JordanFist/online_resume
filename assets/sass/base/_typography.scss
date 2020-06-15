@@ -88,11 +88,3 @@ em {
 .indent {
     text-indent: 4rem;
 }
-
-footer p {
-    text-align: center;
-    font-family: map-get($font, family-heading);
-    color: map-get($palette, footer-writing);
-    font-size: 0.9rem;
-    letter-spacing: 0.05rem;
-}

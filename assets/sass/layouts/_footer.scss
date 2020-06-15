@@ -14,7 +14,7 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding: 1.5rem 0 1.5rem 0;
+        padding: 1.5rem 0;
         background-image: radial-gradient(rgba(0, 0, 0, 0.15) 35%, rgba(0, 0, 0, 0.1) 0%);
         :nth-child(2) {
             margin: auto 1.5rem;
@@ -22,7 +22,17 @@ footer {
     }
     .copyright {
         background-color: map-get($palette, footer-background);
-        padding: 0.06rem 0rem;
+        text-align: center;
+        font-family: map-get($font, family-heading);
+        color: map-get($palette, footer-writing);
+        font-size: 0.9rem;
+        letter-spacing: 0.05rem;
+        @include tablet {
+            font-size: 0.8rem;
+        }
+        @include mobile {
+            font-size: 0.7rem;
+        }
     }
     /*body.is-preload & {
         opacity: 0;

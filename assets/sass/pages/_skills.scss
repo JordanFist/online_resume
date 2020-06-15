@@ -1,15 +1,14 @@
 .skills {
     .tile {
         text-align: center;
-        padding-left: 0;
-        padding-right: 0;
+        padding: 3rem 0;
     }
     p {
-        padding-left: 3rem;
-        padding-right: 3rem;
+        margin: 0 3rem;
+        margin-bottom: 0.6rem;
     }
     h4 {
-        padding: 10px 0;
+        margin: 0.8rem 0;
     }
     .icon__frame {
         display: flex;
@@ -20,7 +19,7 @@
         clip-path: circle(49%);
     }
     .skills__icons {
-        padding: 0 1rem;
+        margin: 0 1rem;
         span {
             display: inline-block;
             line-height: 1rem;

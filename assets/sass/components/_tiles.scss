@@ -1,5 +1,5 @@
 .tile {
-    padding: 3rem 3rem 3rem 3rem;
+    padding: 3rem;
     margin-bottom: 1rem;
     background-color: map-get($palette, main-background);
     border-radius: 3px;
@@ -24,10 +24,10 @@
         box-shadow: none;
         height: 100%;
         &.left-corner {
-            background-image: radial-gradient(circle at -0.8% 0px, rgba(0, 0, 0, 0) 0, rgb(222,184,135, 0) 105px, white 105px);
+            background-image: radial-gradient(circle at -1.2% 0px, rgba(0, 0, 0, 0) 0, rgb(222,184,135, 0) 105px, white 105px);
         }
         &.right-corner {
-            background-image: radial-gradient(circle at 100.8% 0px, rgba(0, 0, 0, 0) 0, rgb(222,184,135, 0) 105px, white 105px);
+            background-image: radial-gradient(circle at 101.2% 0px, rgba(0, 0, 0, 0) 0, rgb(222,184,135, 0) 105px, white 105px);
         }
         &.left-corner, &.right-corner {
             @include tablet {

@@ -16,16 +16,16 @@
     }
     &.round {
         display: block;
-        margin: 2rem auto;
+        margin: 1.5rem auto;
         width: 25%;
         border-radius: 50%; 
         max-width: 150px;
         min-width: 100px;
         &.special {
-            width: 39%;
-            margin: 0 auto;
-            max-width: 235px; 
-            min-width: 160px;
+            width: 37%;
+            border-radius: 0;
+            max-width: 220px; 
+            min-width: 146px;
         }
     }
     &.square {
