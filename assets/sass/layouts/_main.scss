@@ -6,9 +6,6 @@
         margin-bottom: 0;
     }
     @include tablet-landscape {
-        margin: 0 3rem;
-    }
-    @include tablet {
         margin: 0 2rem;
     }
     @include mobile {

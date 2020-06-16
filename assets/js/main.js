@@ -255,8 +255,8 @@
 		}
 	});
 
-	// Fix balloon overflow for mobile devices.
-		/*Breakpoints.get("mobile").on({
+	// Fix balloon overflow for portable devices.
+		Breakpoints.get("portable").on({
 
 			enter: function() {
 				$(".balloon--resized").attr("data-balloon-length", "medium");
@@ -266,20 +266,6 @@
 				$(".balloon--resized").removeAttr("data-balloon-length");
 			}
 
-		});*/
-		
-		// A partir de portable on met en medium ce qui depasse
-		Breakpoints.get("portable").on("enter", function() {
-			$("#skills span").each(function() {
-				var $this = $(this),
-					$window_width = window.innerWidth;
-
-					console.log(window.getComputedStyle($this[0], ':before').width)
-					
-				//if ($this[0].getBoundingClientRect().right > $window_width) {
-					$this.attr("data-balloon-length", "medium");
-				//}
-			});	
 		});
  
 	// Modify the navbar to be visible on white background on mobile.
