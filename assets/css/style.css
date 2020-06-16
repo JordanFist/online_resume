@@ -874,6 +874,11 @@ footer .copyright {
 .identity .right-corner h3:after {
   width: 123px;
 }
+@media screen and (max-width: 1200px) {
+  .identity .right-corner h3:after {
+    width: 114px;
+  }
+}
 @media screen and (max-width: 992px) {
   .identity .right-corner {
     padding-top: 5rem;
@@ -891,8 +896,13 @@ footer .copyright {
   margin-right: 2rem;
 }
 .identity .left-corner h3:after {
-  width: 88px;
+  width: 86px;
   left: -10px;
+}
+@media screen and (max-width: 1200px) {
+  .identity .left-corner h3:after {
+    width: 80px;
+  }
 }
 @media screen and (max-width: 992px) {
   .identity .left-corner {
@@ -931,7 +941,7 @@ footer .copyright {
 }
 @media screen and (max-width: 992px) {
   .experience__writing h3 {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     text-align: center;
   }
 }

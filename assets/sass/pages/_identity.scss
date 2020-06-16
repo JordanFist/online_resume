@@ -32,6 +32,11 @@
         h3:after {
             width: 123px;
         }
+        @include tablet-landscape {
+            h3:after {
+                width: 114px;
+            }
+        }
         @include tablet {
             padding-top: 5rem;
         }
@@ -45,8 +50,13 @@
             margin-right: 2rem;
         }
         h3:after {
-            width: 88px;
+            width: 86px;
             left: -10px;
+        }
+        @include tablet-landscape {
+            h3:after {
+                width: 80px;
+            }
         }
         @include tablet {
             text-align: left;
