@@ -612,7 +612,7 @@ nav.alt span {
   nav .nav__contact {
     display: flex;
     justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 3rem;
   }
   nav .nav__contact > :nth-child(2) {
     margin: 0 1rem;
@@ -620,7 +620,7 @@ nav.alt span {
   nav .language {
     display: flex;
     justify-content: center;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
   }
   nav .language > :first-child {
     margin-right: 1rem;
