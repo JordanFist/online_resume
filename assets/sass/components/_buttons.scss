@@ -34,8 +34,8 @@
         border-radius: 50%;
         transition: border-color 0.2s ease-in-out;
         line-height: 1rem;
-        height: 2rem;
-        width: 2rem;
+        height: 2.7rem;
+        width: 2.7rem;
         @include hoverable {
             &:hover {
                 border-color: burlywood;
