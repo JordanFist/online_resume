@@ -589,7 +589,10 @@ nav.alt span {
     background-color: #eeeeee;
   }
   nav ul {
-    padding: 0 2.5rem;
+    padding: 0 2rem;
+  }
+  nav li {
+    margin-left: 0.5rem;
   }
   nav svg {
     display: none;
