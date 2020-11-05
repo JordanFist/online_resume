@@ -691,7 +691,7 @@ header .wrapper {
 }
 @media screen and (max-width: 1200px) {
   header .wrapper {
-    height: 53vh;
+    height: 52vh;
   }
 }
 header .language {
@@ -710,12 +710,14 @@ header .language > :first-child {
 header .main-title {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 @media screen and (max-width: 1200px) {
   header .main-title {
     height: 11.4rem;
-    margin-top: 3rem;
+    margin-top: 5rem;
+    width: 95%;
   }
 }
 header .content {
