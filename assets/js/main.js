@@ -2,7 +2,7 @@
 
 	// Useful variables.
 		var	$window = $(window),
-			$html = $("html",)
+			$html = $("html"),
 			$body = $("body"),
 			$header = $("header"),
 			$wrapper = $("#wrapper"),
